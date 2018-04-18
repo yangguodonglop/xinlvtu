@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>积分商城</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png"/></a>
+			<h1 class="mui-title">积分商城</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider b_w">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-hs">
+					<a class="mui-control-item mui-active" href="#item1mobile">数码</a>
+					<a class="mui-control-item" href="#item2mobile">户外</a>
+					<a class="mui-control-item" href="#item3mobile">美妆</a>
+					<a class="mui-control-item" href="#item4mobile">电器</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+				<div class="mui-slider-group" id="action_hei">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<img class="widths" src="../imgs/banner4.jpg"/>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell row1 h_125">
+										<img src="../imgs/img_17.jpg" class="img9" style="width: 98px;" />
+										<div class="col3 mar_l_10">
+											<span class="ts_16">全网通四核核10.1英寸GPS导航安卓通话平板电脑 </span>
+											<div class="row2">
+												<span class="ts_17 txt_c1">2000<span class="ts_12 txt_c4 pad_l_10">积分</span></span>
+												<img class="img10 mar_b_5" style="width: 71px;" src="../imgs/msdh.png"/>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell row1 h_125">
+										<img src="../imgs/img_18.jpg" class="img9" style="width: 98px;" />
+										<div class="col3 mar_l_10">
+											<span class="ts_16">全网通四核核10.1英寸GPS导航安卓通话平板电脑 </span>
+											<div class="row2">
+												<span class="ts_17 txt_c1">2000<span class="ts_12 txt_c4 pad_l_10">积分</span></span>
+												<img class="img10 mar_b_5" style="width: 71px;" src="../imgs/msdh.png"/>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell row1 h_125">
+										<img src="../imgs/img_19.jpg" class="img9" style="width: 98px;" />
+										<div class="col3 mar_l_10">
+											<span class="ts_16">全网通四核核10.1英寸GPS导航安卓通话平板电脑 </span>
+											<div class="row2">
+												<span class="ts_17 txt_c1">2000<span class="ts_12 txt_c4 pad_l_10">积分</span></span>
+												<img class="img10 mar_b_5" style="width: 71px;" src="../imgs/msdh.png"/>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell row1 h_125">
+										<img src="../imgs/img_20.jpg" class="img9" style="width: 98px;" />
+										<div class="col3 mar_l_10">
+											<span class="ts_16">全网通四核核10.1英寸GPS导航安卓通话平板电脑 </span>
+											<div class="row2">
+												<span class="ts_17 txt_c1">2000<span class="ts_12 txt_c4 pad_l_10">积分</span></span>
+												<img class="img10 mar_b_5" style="width: 71px;" src="../imgs/msdh.png"/>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll4" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="../js/mui.min.js"></script>
+<script>
+	mui.init({
+		swipeBack: false
+	});
+	(function($) {
+
+		$('#action_hei')[0].style.height = (window.screen.availHeight-84)+'px';
+		
+		
+		$('.mui-scroll-wrapper').scroll({
+			indicators: true //是否显示滚动条
+		});
+		var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
+		var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
+		var item2 = document.getElementById('item2mobile');
+		var item3 = document.getElementById('item3mobile');
+		document.getElementById('slider').addEventListener('slide', function(e) {
+			if(e.detail.slideNumber === 1) {
+				if(item2.querySelector('.mui-loading')) {
+					setTimeout(function() {
+						item2.querySelector('.mui-scroll').innerHTML = html2;
+					}, 500);
+				}
+			} else if(e.detail.slideNumber === 2) {
+				if(item3.querySelector('.mui-loading')) {
+					setTimeout(function() {
+						item3.querySelector('.mui-scroll').innerHTML = html3;
+					}, 500);
+				}
+			}
+		});
+
+	})(mui);
+</script>

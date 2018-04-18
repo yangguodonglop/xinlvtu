@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+	
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/domestic.css" />
+		<link rel="stylesheet" type="text/css" href="css/showLoging.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/personal_set.css" />
+	</head>
+
+	<body>
+		<div>
+			<header class="mui-bar mui-bar-nav back_red bg_white">
+				<a href="javascript:void(0);" class="mui-icon mui-pull-left mui-action-back "><img class="nar_back margin_l_10" src="imgs/img_76.png"></a>
+				<h1 class="mui-title c_white c_txt1 ts_18">个人信息</h1>
+			</header>
+			<div class="col_2 ali txt_16 con_tal">
+				<div class="con_item con_item_active">
+					<div class="con_item_l c_txt1 txt_15 ts_18 txt_c2">头像</div>
+					<div class="con_item_r">
+						<span class="span_text c_txt1 txt_12 span_text_active"><img src="imgs/new_img_02.png" class="img_con_s"></span>
+						<a href="#"><img src="imgs/new_img_01.png" class="img_con"></a>
+					</div>
+				</div>
+				<div class="con_item c_txt1">
+					<div class="con_item_l c_txt1 txt_15 ts_18 txt_c2">昵称</div>
+					<div class="con_item_r">
+						<span class="span_text c_txt1 ts_15 txt_c4">欣途天下</span>
+						<a href="#"><img src="imgs/new_img_01.png" class="img_con"></a>
+					</div>
+				</div>
+				<div class="con_item c_txt1">
+					<div class="con_item_l c_txt1 txt_15 ts_18 txt_c2">签名</div>
+					<div class="con_item_r">
+						<span class="span_text c_txt1 ts_15 txt_c4">人生就像旅途。</span>
+						<a href="#"><img src="imgs/new_img_01.png" class="img_con"></a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>目的地</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+	</head>
+
+<body>
+<div id="app">		
+		<!--标题-->
+		<div class="h_44 b_w txt_c2 ts_18 txt_cont">目的地</div>
+		<!--搜索-->
+		<div class="h_50 b_w row ts_15 br1">
+			<div class="mar_l_20 txt_c1">武汉 <img class="img1 mar_l_5" src="imgs/img_01.png" alt=""/></div>
+			<div class="tit_back1 txt_c4"><img class="img2 mar_r_5" src="imgs/img_02.png" alt="" /> 搜索你想去的地方</div>
+		</div>
+		
+		<div class="mui-content mui-row mui-fullscreen mar_t_95">
+			<div class="mui-col-xs-3">
+				<ul id="" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+					<li :class="(pg==1)?'l_item_action':'l_item'" onclick="sele_item(1)">当季热门</li>
+					<li :class="(pg==2)?'l_item_action':'l_item'" onclick="sele_item(2)">国内</li>
+					<li :class="(pg==3)?'l_item_action':'l_item'" onclick="sele_item(3)">周边</li>
+					<li :class="(pg==4)?'l_item_action':'l_item'" onclick="sele_item(4)">东南亚</li>
+					<div style="width: 100%; background-color: white; height: 500px;"></div>
+				</ul>
+			</div>
+			<div id="" class="mui-col-xs-9 pad_10">
+				<img class="widths brad_5" src="imgs/img_101.jpg"/>
+				<div class="row_wrap mar_t_5">
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+				</div>
+				<img class="widths brad_5" src="imgs/img_101.jpg"/>
+				<div class="row_wrap mar_t_5">
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+				</div>
+				<img class="widths brad_5" src="imgs/img_101.jpg"/>
+				<div class="row_wrap mar_t_5">
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+				</div>
+				<img class="widths brad_5" src="imgs/img_101.jpg"/>
+				<div class="row_wrap mar_t_5">
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden"> 
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><span>TAIGUO</span></div>
+						<img class="heights" src="imgs/img_103.jpg"/>
+					</div>
+					<div class="rel wid_48 mar_b_10" style="height: 90px; overflow: hidden">
+						<div class="bac_zz widths heights abs"></div>
+						<div class="txt_cw abs col1"><div>泰国</div><div class="">TAIGUO</div></div>
+						<img class="heights" src="imgs/img_103.JPG"/>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+</div>
+</body>
+
+</html>
+
+<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.min.js"></script>
+<script>
+	mui.init({
+//		swipeBack: true //启用右滑关闭功能
+		
+	});
+	
+	var app = new Vue({
+		el:'#app',
+		data:{
+			pg:1,
+		}
+	});
+	function sele_item(n){
+		app.pg = n;
+	}
+	
+	
+	
+	(function($, doc) {
+		//获取高度
+//		var h =   window.screen.height ;
+//		console.log(h);
+	}(mui, document));	
+</script>

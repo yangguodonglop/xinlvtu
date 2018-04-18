@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>兑换记录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body>
+		<!--标题-->
+		<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
+			<h1 class="mui-title">兑换记录</h1>
+		</header>
+		
+		<div class="mui-content txt_c2 ts_15">
+			<div class="row b_w mar_t_1 h_115 pad_13">
+				<img class="img18" src="../imgs/img_18.jpg"/>
+				<div class="col3 mar_l_30">
+					<span class="ts_w_600">MORUI魔睿 充电宝20000M毫安 移动电源 超薄大容量</span>
+					<div class="row mar_b_5 ts_11">
+						<span class="txt_c4">2018-4-9 14:12:09</span>
+						<span class="ts_12 txt_c1">成功</span>
+					</div>
+				</div>
+			</div>	
+			<div class="row b_w mar_t_1 h_115 pad_13">
+				<img class="img18" src="../imgs/img_18.jpg"/>
+				<div class="col3 mar_l_30">
+					<span class="ts_w_600">MORUI魔睿 充电宝20000M毫安 移动电源 超薄大容量</span>
+					<div class="row mar_b_5 ts_11">
+						<span class="txt_c4">2018-4-9 14:12:09</span>
+						<span class="ts_12 txt_c1">成功</span>
+					</div>
+				</div>
+			</div>		
+		</div>	
+	</body>
+
+</html>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init()
+</script>

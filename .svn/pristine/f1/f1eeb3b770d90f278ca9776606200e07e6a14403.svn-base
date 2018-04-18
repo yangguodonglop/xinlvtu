@@ -1,0 +1,20 @@
+URLS = 'http://api.xinlv123.com';
+//URLS = 'http://192.168.1.110:1676';
+
+//发送验证码
+YZM_ZC = 'http://www.xinlv123.com/APP/xltx/sendRegisterCode';
+YZM_DL = 'http://www.xinlv123.com/APP/xltx/sendLoginCode';
+YZM_RZ = 'http://www.xinlv123.com/APP/xltx/send/auth_phone_code';
+//登录方式
+ZHDL = 'http://www.xinlv123.com/APP/xltx/password/login';
+DXDL = 'http://www.xinlv123.com/APP/xltx/login';
+DXRZ = 'http://www.xinlv123.com/APP/xltx/auth/set_phone';
+//注册
+ZCTJ = 'http://www.xinlv123.com/APP/xltx/register';
+//找回密码
+YZM_ZHMM = 'http://www.xinlv123.com/APP/xltx/send/forgetCode';
+XGMM = 'http://www.xinlv123.com/APP/xltx/resetPassword';
+//支付
+PAY_WX = 'http://www.xinlv123.com/APP/xltx/wechat/pay'; 
+PAY_AL = 'http://www.xinlv123.com/APP/xltx/alipay/pay';
+

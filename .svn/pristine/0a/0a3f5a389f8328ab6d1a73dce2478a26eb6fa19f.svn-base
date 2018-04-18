@@ -1,0 +1,54 @@
+{
+	"index.html": {
+		"resources": [
+			"css/base.css",
+			"js/vue_resource.js",
+			"imgs/logo(96x96).png",
+			"imgs/img1.png",
+			"imgs/img7.png",
+			"js/vue.min.js",
+			"imgs/img6.png",
+			"imgs/img3.png",
+			"js/base_data.js",
+			"imgs/banner_zz.PNG",
+			"css/index.css",
+			"imgs/img_100.jpg",
+			"imgs/img8.png",
+			"js/mui.min.js",
+			"imgs/img_01-min.png",
+			"imgs/img4.png",
+			"css/mui.min.css",
+			"js/data.json",
+			"imgs/img5.png",
+			"imgs/img_02-min.png",
+			"imgs/img2.png",
+			"invite_friends.html",
+			"discount_coupon.html"
+		],
+		"refer": [
+			"invite_friends.html",
+			"discount_coupon.html"
+		]
+	},
+	"invite_friends.html": {
+		"resources": [
+			"imgs/new_img_016.png",
+			"css/base.css",
+			"css/new_style.css",
+			"fonts/mui.ttf",
+			"imgs/new_img_017.png",
+			"css/mui.min.css",
+			"imgs/img_76.png"
+		]
+	},
+	"discount_coupon.html": {
+		"resources": [
+			"imgs/new_img_07.png",
+			"css/new_style.css",
+			"fonts/mui.ttf",
+			"css/personal_set.css",
+			"imgs/img_76.png",
+			"css/mui.min.css"
+		]
+	}
+}

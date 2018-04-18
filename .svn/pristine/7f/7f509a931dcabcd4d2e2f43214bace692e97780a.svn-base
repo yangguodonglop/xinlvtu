@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+<div id="app">
+	<!--头部-->
+	<div class="row h_44 txt_cw ts_14 linear_tit_back">
+		<div class="mar_l_20">武汉 <img class="img1 mar_l_5" src="imgs/img_01-min.png" alt=""/></div>
+		<div class="tit_back"><img class="img2 mar_r_5" src="imgs/img_02-min.png" alt="" /> 目的地/关键词</div>
+		<img class="img3 mar_r_20" src="imgs/logo(96x96).png"/>
+	</div>
+	
+	<!--轮播图-->
+	<div class="mui-slider b_w zxb-slider rel">
+		<img class="abs widths" style="z-index: 100; bottom: 5px;" src="imgs/banner_zz.PNG"/>
+		<div class="mui-slider-group mui-slider-loop">
+			<div v-for="item in banner" class="mui-slider-item"><img :src="item" /></div>
+		</div>
+	</div>
+	
+	<!--导航模块-->
+	<div class="row_wrap pad_l_10 pad_r_10 pad_b_10 ts_12 b_w">
+		<img class="index_tit" src="imgs/img1.png"/>
+		<img class="index_tit" src="imgs/img2.png"/>
+		<img class="index_tit" src="imgs/img3.png"/>
+		<img class="index_tit" src="imgs/img4.png"/>
+		<img class="index_tit" src="imgs/img5.png"/>
+		<img class="index_tit" src="imgs/img6.png"/>
+		<img class="index_tit" src="imgs/img7.png"/>
+		<img class="index_tit" src="imgs/img8.png"/>
+	</div>
+	
+	<!--猜你想去-->
+	<div class="b_w mar_t_10 ts_15" id="txt_tit">
+		<div class="row pad_l_10 pad_r_10 pad_t_10">
+			<div class="txt_c1 row"><span class="iocn1 linear_back_c9"></span> 猜你想去</div>
+			<div class="ts_12 pad_r_5">更多 ></div>
+		</div>
+		
+		<!--文字-->
+		<div :class="(mag_t < -35)?'index_tit_fix':'index_tit_fix1'">
+			<div class="row mar_l_20 mar_r_20">
+				<span :class="(cur_page == 0)?'action_tit1':'action_tit'" onclick="goto_item(0)">推荐</span>
+				<span :class="(cur_page == 1)?'action_tit1':'action_tit'" onclick="goto_item(1)">出境游</span>
+				<span :class="(cur_page == 2)?'action_tit1':'action_tit'" onclick="goto_item(2)">国内游</span>
+				<span :class="(cur_page == 3)?'action_tit1':'action_tit'" onclick="goto_item(3)">周边游</span>
+				<span :class="(cur_page == 4)?'action_tit1':'action_tit'" onclick="goto_item(4)">主题游</span>
+			</div>
+		</div>
+		
+		<div :class="(mag_t < -35)?'mar_t_37':''">
+			<!--第一个内容区容器-->
+			<img class="pad_l_10 pad_r_10 widths" src="imgs/img_100.jpg" id="gt_img1"/>
+			<div class="pad_l_10 pad_r_10  mar_b_5">
+				<div class="row_wrap">  
+					<div v-for="item in dt1.data" class="col wid_49 h_190 mar_b_10">
+						<div class="rel">
+							<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">{{item.start}}出发</span>
+							<img class="widths" :src="item.thumb"/>
+						</div>
+						<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title_top}}</span>
+						<div class="row widths mar_t_5">
+							<div class="ts_12 txt_c1">￥<span class="ts_18">{{item.price}}</span> 起</div>
+							<span class="txt_c3 pad_r_5 ts_11">{{item.id}}人购买</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--第二个内容区容器-->
+			<img class="pad_l_10 pad_r_10 widths" src="imgs/img_100.jpg" id="gt_img2"/>
+			<div class="pad_l_10 pad_r_10 mar_b_5">
+				<div class="row_wrap">
+					<div v-for="item in dt2.data" class="col wid_49 h_190 mar_b_10">
+						<div class="rel">
+							<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">{{item.start}}出发</span>
+							<img class="widths" :src="item.thumb"/>
+						</div>
+						<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title_top}}</span>
+						<div class="row widths mar_t_5">
+							<div class="ts_12 txt_c1">￥<span class="ts_18">{{item.price}}</span> 起</div>
+							<span class="txt_c3 pad_r_5 ts_11">{{item.id}}人购买</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--第三个内容区容器-->
+			<img class="pad_l_10 pad_r_10 widths" src="imgs/img_100.jpg" id="gt_img3"/>
+			<div class="pad_l_10 pad_r_10 mar_b_5">
+				<div class="row_wrap">
+					<div v-for="item in dt3.data" class="col wid_49 h_190 mar_b_10">
+						<div class="rel">
+							<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">{{item.start}}出发</span>
+							<img class="widths" :src="item.thumb"/>
+						</div>
+						<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title_top}}</span>
+						<div class="row widths mar_t_5">
+							<div class="ts_12 txt_c1">￥<span class="ts_18">{{item.price}}</span> 起</div>
+							<span class="txt_c3 pad_r_5 ts_11">{{item.id}}人购买</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--第四个内容区容器-->
+			<img class="pad_l_10 pad_r_10 widths" src="imgs/img_100.jpg" id="gt_img4"/>
+			<div class="pad_l_10 pad_r_10 mar_b_5">
+				<div class="row_wrap">
+					<div v-for="item in dt4.data" class="col wid_49 h_190 mar_b_10">
+						<div class="rel">
+							<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">{{item.start}}出发</span>
+							<img class="widths" :src="item.thumb"/>
+						</div>
+						<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title_top}}</span>
+						<div class="row widths mar_t_5">
+							<div class="ts_12 txt_c1">￥<span class="ts_18">{{item.price}}</span> 起</div>
+							<span class="txt_c3 pad_r_5 ts_11">{{item.id}}人购买</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--第五个内容区容器-->
+			<img class="pad_l_10 pad_r_10 widths" src="imgs/img_100.jpg" id="gt_img5"/>
+			<div class="pad_l_10 pad_r_10 mar_b_5">
+				<div class="row_wrap">
+					<div v-for="item in dt5.data" class="col wid_49 h_190 mar_b_10">
+						<div class="rel">
+							<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">{{item.start}}出发</span>
+							<img class="widths" :src="item.thumb"/>
+						</div>
+						<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title_top}}</span>
+						<div class="row widths mar_t_5">
+							<div class="ts_12 txt_c1">￥<span class="ts_18">{{item.price}}</span> 起</div>
+							<span class="txt_c3 pad_r_5 ts_11">{{item.id}}人购买</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>	
+</body>
+</html>
+<script src="js/mui.min.js"></script>
+<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	mui.init();
+	var app = new Vue({
+		el:'#app',
+		data:{
+			banner: [
+				'http://api.xinlv123.com/images/adv/2018_02/20180205140624_58955.jpg',
+				'http://api.xinlv123.com/images/adv/2018_02/20180205140516_24131.jpg',
+				'http://api.xinlv123.com/images/adv/2018_02/20180205140601_72234.jpg',
+				'http://api.xinlv123.com/images/adv/2018_02/20180205140624_58955.jpg',
+				'http://api.xinlv123.com/images/adv/2018_02/20180205140516_24131.jpg'
+			],
+			dt1:'',
+			dt2:'',
+			dt3:'',
+			dt4:'',
+			dt5:'',
+			cur_page: 0,
+			mag_t: 10
+		},
+		mounted: function() {
+			this.getdata();
+	    },
+	    methods: {
+	     	getdata : () => {
+	     		Vue.http.get('js/data.json').then(function(response){
+			        // 响应成功回调
+			        app.dt1 = response.body[0];
+			        app.dt2 = response.body[1];
+			        app.dt3 = response.body[2];
+			        app.dt4 = response.body[3];
+			        app.dt5 = response.body[4];
+			    }, function(response){
+			        // 响应错误回调
+			    });
+	     	}
+	    }
+	});
+
+</script>
+
+<script type="text/javascript">
+	(function($, doc) {
+		//轮播图控制
+		var gallery = mui('.zxb-slider');
+		gallery.slider({
+			interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+	}(mui, document));	
+</script>
+
+<script>
+	//获取div距离顶部的距离
+	var mTop = document.getElementById('txt_tit').offsetTop;
+
+	//悬停功能
+	window.onscroll=function(){
+	    //减去滚动条的高度
+	    var sTop = document.documentElement.scrollTop;
+	    var result = mTop - sTop;
+	    app.mag_t = result;
+	    
+	    //得到每个部位距离顶部的距离
+		var img1 = document.getElementById('gt_img1').offsetTop;
+		var img2 = document.getElementById('gt_img2').offsetTop;
+		var img3 = document.getElementById('gt_img3').offsetTop;
+		var img4 = document.getElementById('gt_img4').offsetTop;
+		var img5 = document.getElementById('gt_img5').offsetTop;
+	    var n1 = img1-sTop;
+	    var n2 = img2-sTop;
+	    var n3 = img3-sTop;
+	    var n4 = img4-sTop;
+	    var n5 = img5-sTop;
+
+	    if(n1<38 && n2>38)
+	    	app.cur_page = 0;
+	    else if(n2<38 && n3>38)
+	    	app.cur_page = 1;
+	    else if(n3<38 && n4>38)
+	    	app.cur_page = 2;
+	    else if(n4<38 && n5>38)
+	    	app.cur_page = 3;
+	    else if(n5<38)
+			app.cur_page = 4;
+	}
+	
+	function goto_item(n){
+		window.scrollTo(0, document.getElementById('gt_img'+(n+1)).offsetTop-37);
+	}
+</script>
+
+
+  
+
+
+
+

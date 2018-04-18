@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>积分商城</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<!--标题-->
+			<header class="mui-bar mui-bar-nav back_red padding_t_20 h_60" style="box-shadow: none;">
+				<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
+				<h1 class="mui-title c_white">积分商城</h1>
+				<a class="mui-icon mui-pull-right" style="display: none;"><img class="nar_img margin_r_10" src="../images/img_32-min.png" /></a>
+			</header>
+			
+			<img class="widths mar_t_45" src="../imgs/banner4.jpg" />
+
+			<!--积分  兑换记录-->
+			<div id="txt_tit" class="row h_44 b_w txt_12 mar_t_-5" style="z-index: 1000;">
+				<div class="wid_49 cen jf_tit_link">
+					<img class="img2 mar_r_5" src="../imgs/money.png" /> 积分
+					<span class="txt_c1 margin_l_5">10</span>
+				</div>
+				<div class="wid_49 cen" onclick="openPager(this, 'record.html')">
+					<img class="img2 mar_r_5" src="../imgs/money_dh.png" /> 兑换记录
+				</div>
+			</div>
+
+			<div id="zxb_cont" class="mui-row mui-fullscreen mar_t_230 b_w">    
+				<div id="zxb_cont1" class="mui-col-xs-3 margin_t_-5">
+					<ul class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+						<li class="l_item_action"onclick="sele_item(0)" >精品推荐</li>
+						<li class="l_item" onclick="sele_item(1)">优惠礼券</li>
+						<li class="l_item" onclick="sele_item(1)">手机数码</li>
+						<div style="width: 100%; background-color: white; height: 100px;"></div>
+					</ul>
+				</div>
+				<div id="zxb_cont2" class="mui-col-xs-9 pad_10">
+					<div>
+						<img class="widths brad_5" src="../imgs/img_16.png" />
+						<div class="row_wrap mar_t_5">
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+						</div>
+					</div>
+					
+					<div>
+						<img class="widths brad_5" src="../imgs/img_16.png" />
+						<div class="row_wrap mar_t_5">
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+							<div class="col1 wid_48 mar_b_10 pad_l_10 pad_r_10" style="width: 50%;">
+								<img class="w_80 h_80" src="../imgs/img_18.jpg" />
+								<span class="ts_12 txt_c2 widths one_lin margin_t_10">全网通四核10.1英寸GPS导航...</span>
+								<span class="ts_12 txt_c1">100积分</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script src="../js/mui.min.js"></script>
+<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/showLoding.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	mui.init()
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			pg: 0,
+			dt: '',
+			integ: 0,
+			img: 0
+		}
+	});
+
+	(function($, doc) {
+		var h = window.innerHeight;
+		document.getElementById('zxb_cont').style.height = (h - 115) + 'px';
+	}(mui, document));
+
+		//保存每个图片的位置
+		var scroll_img = [0, 0, 0, 0, 0];
+		var contentsElem = document.getElementById("zxb_cont2");
+	
+	//切换
+	function sele_item(e) {
+		var n = e.getAttribute('data-n');
+		vm.pg = n;
+		contentsElem.scrollTop = scroll_img[n]-10;
+	}
+
+	window.onload = function() {
+		//注意：若为ajax请求，则需将如下代码放在处理完ajax响应数据之后；
+		mui.plusReady(function() {
+			var currentView = plus.webview.currentWebview();
+			//			vm.city = currentView.item;
+			vm.integ = plus.storage.getItem('integ');
+			mui.get(URLS1, function(data) {
+				for(var i = 0; i < data.data.length; i++) {
+					for(var j = 0; j < data.data[i].products.length; j++) {
+						data.data[i].products[j].thumb = 'http://www.xinlv123.com' + data.data[i].products[j].thumb;
+					}
+				}
+				vm.dt = data.data;
+				mui.hideLoading(); //隐藏后的回调函数 
+				setTimeout(function(){
+					onscrol();
+				},200);
+			}, 'json');
+
+			//关闭等待框
+			plus.nativeUI.closeWaiting();
+			//显示当前页面
+			mui.currentWebview.show();
+			mui.showLoading("正在加载数据...", "div");
+		});
+	}
+
+		function onscrol(){
+			
+			scroll_img[0] = document.getElementById('0').offsetTop;
+			scroll_img[1] = document.getElementById('1').offsetTop;
+			scroll_img[2] = document.getElementById('2').offsetTop;
+			scroll_img[3] = document.getElementById('3').offsetTop;
+			scroll_img[4] = document.getElementById('4').offsetTop;
+			
+			contentsElem.addEventListener('scroll', function(e) {
+					var cur_scro = contentsElem.scrollTop;
+					// vm.img = cur_scro;
+					
+					if((cur_scro+10) >= scroll_img[0] && (cur_scro+10) < scroll_img[1])
+							vm.pg = 0;
+					else if((cur_scro+10) >= scroll_img[1] && (cur_scro+10) < scroll_img[2])
+							vm.pg = 1;
+					else if((cur_scro+10) >= scroll_img[2] && (cur_scro+10) < scroll_img[3])
+							vm.pg = 2;
+					else if((cur_scro+10) >= scroll_img[3] && (cur_scro+10) < scroll_img[4])
+							vm.pg = 3;
+					else if((cur_scro+10) >= scroll_img[4])
+							vm.pg = 4;		
+			});
+		}
+	
+	//页面跳转
+	function openPager(e, urls) {
+		var ids = e.getAttribute('data-id');
+		var tit = '';
+		if(urls == 'doods_more.html') {
+			tit = e.getAttribute('data-name');
+		}
+		//A页面中打开B页面，设置show的autoShow为false，则B页面在其loaded事件发生后，不会自动显示；
+		mui.openWindow({
+			url: urls,
+			id: urls,
+			show: {
+				autoShow: false
+			},
+			extras: {
+				item: ids,
+				tit: tit
+			}
+		});
+	}
+	
+</script>

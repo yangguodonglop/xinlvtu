@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/> 
+		<!--<link rel="stylesheet/less" type="text/css" href="../../css/z_style.less"/>
+		<script src="../../js/less.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+
+	<body>
+		<!--标题-->
+		<header class="mui-bar mui-bar-nav" style="box-shadow: none; border-bottom: 1px solid #e6e6e6;">
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="../../imgs/left_jt.png" /></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		
+		<div class="col1 ts_16 mar_t_30 txt_c2">
+			<!--账号登录-->
+			<div id="login1" class="widths col h_170" >
+				<div class="row mar_t_-5 widths">   
+					<span class="w_80 fshr mar_t_-2">手机号</span>
+					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="number" id="phone1" placeholder="手机号 / 用户名" oninput="if(value.length>11)value=value.slice(0,11)" onblur="upperCase(1)"/>
+				</div>
+				<div class="login_hr mar_t_-9"></div>
+				<div class="row mar_t_-5 widths">   
+					<span class="w_80 fshr mar_t_-2">验证码</span>
+					<input style="border: 0; background-color: transparent; flex-grow: 1; margin-top: 15px;" type="number" oninput="if(value.length>5)value=value.slice(0,5)" id="yzm" placeholder="输入短信验证码"/>
+					<span class="txt_c4 login_txt" style="margin-bottom: 1px;">|</span>
+					<span class="w_110 txt_c4 fshr" id="but_yzm" onclick="get_dh()">发送验证码&nbsp;&nbsp;</span>
+				</div>
+				<div class="login_hr mar_t_-9"></div>
+				<div class="row mar_t_-5 widths">     
+					<span class="w_80 fshr mar_t_-2">密&nbsp;&nbsp;  码</span>        
+					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="password" id="pw" placeholder="请输入密码"/>
+				</div>
+				<div class="login_hr mar_t_-9"></div>
+			</div>
+			<!--手机登录-->
+			<div id="login2" class="widths col h_118" style="display: none;">
+				<div class="login_hr mar_t_-5"></div>
+				<div class="row mar_t_-5 widths">
+					<span class="w_80 fshr mar_t_-2">手机号</span>
+					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="number" id="phone2" placeholder="手机号"  oninput="if(value.length>11)value=value.slice(0,11)" onblur="upperCase(2)"/>
+				</div>
+				<div class="login_hr mar_t_-9"></div>
+				<div class="row mar_t_-5 widths">   
+					<span class="w_80 fshr mar_t_-2">验证码</span>
+					<input style="border: 0; background-color: transparent; flex-grow: 1; margin-top: 15px;" type="number" oninput="if(value.length>5)value=value.slice(0,5)" id="yzm" placeholder="验证码"/>
+					<span class="txt_c4 login_txt" style="margin-bottom: 1px;">|</span>
+					<span class="w_110 txt_c4 fshr" id="but_yzm" onclick="get_dh()">发送验证码&nbsp;&nbsp;</span>
+				</div>
+				<div class="login_hr mar_t_-9"></div>
+			</div>
+			<div onclick="" class="ts_12 txt_c3 login_hyxy pad_t_10 mar_10">
+				<img class="me_iocn1" src="../../imgs/img_41.png" />&nbsp;&nbsp;同意心旅天下《会员服务协议》
+			</div>
+			<span class="but_bac txt_cw width_90 mar_t_20" onclick="login()">登录</span>
+		</div>
+		
+	</body>
+
+</html>
+<script src="../../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init()
+</script>

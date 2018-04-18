@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑收货地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body>
+		<!--标题-->
+		<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
+			<h1 class="mui-title">编辑收货地址</h1>
+		</header>
+		
+		<div class="mui-content mar_t_1 txt_c2 ts_14">
+			<div class="b_w">
+				<div class="h_44 b_w row pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600">收货人</span>
+					<input type="text" name="" id="" value="张三" placeholder="填写收货人"
+						style="border: 0; flex-grow: 1; height: 40px; margin-top: 13px; font-size: 14px;"/>
+				</div>
+				<div class="br4"></div>
+				<div class="h_44 b_w row pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600">联系电话</span>
+					<input type="number" name="" id="" value="13622223567" placeholder="填写联系电话"
+						style="border: 0; flex-grow: 1; height: 40px; margin-top: 13px; font-size: 14px;"/>
+				</div>
+				<div class="br4"></div>
+				<div class="h_44 b_w row pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600">所在地区</span>
+					<span style="flex-grow: 1;">湖北省武汉市洪山区关山街道</span>
+					<img class="img17" src="../imgs/img_25.png"/>
+				</div>
+				<div class="br4"></div>
+				<div class="h_80 b_w row1 pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600 pad_t_10">详细地址</span>
+					<textarea class="h_80 ts_14" type="text" name="" id="" value="光谷软件园" placeholder="填写联系电话"
+						style="border: 0; flex-grow: 1;">光谷软件园</textarea>
+				</div>
+			</div>
+			
+			<div class="txt_cw ts_16 but_bac mar_13 mar_t_30">
+				保存地址
+			</div>
+		</div>	
+
+	</body>
+
+</html>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init()
+</script>

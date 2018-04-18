@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body style="overflow: hidden;">
+	<div id="app">
+		<!--搜索标题-->
+		<div class="h_44 row tit_bor">
+			<span class="mui-action-back"><img class="img11" src="../imgs/left_jt.png"/></span>
+			<span class="txt_c2 ts_18 wgt_600">桂林</span>
+			<span><img class="w_20 mar_r_15 mar_t_5" src="../imgs/img_31.png"/></span>
+		</div>
+		<!--选项一-->
+		<div id="tit1" class="h_44 tit_bor row5 ts_14 txt_c2">
+			<span :class="(tit1==0)?'tit_action':'tit_txt'" onclick="tit1(0)">产品推荐</span>
+			<span :class="(tit1==1)?'tit_action':'tit_txt'" onclick="tit1(1)">自由行</span>
+			<span :class="(tit1==2)?'tit_action':'tit_txt'" onclick="tit1(2)">跟团游</span>
+			<span :class="(tit1==3)?'tit_action':'tit_txt'" onclick="tit1(3)">周边游</span>
+			<span :class="(tit1==4)?'tit_action':'tit_txt'" onclick="tit1(4)">景点门票</span>
+		</div>
+		<!--选项二-->		
+		<div class="h_44 tit_bor row5 ts_14 txt_c3">
+			<span :class="(back==1)?'txt_c1':''" onclick="tit2(1)">推荐排序 <img v-if="back==1" class="img21" src="../imgs/img_33.PNG"/><img v-else class="img21" src="../imgs/img_32.PNG"/></span>
+			<span :class="(back==2)?'txt_c1':''" onclick="tit2(2)">日期天数 <img v-if="back==2" class="img21" src="../imgs/img_33.PNG"/><img v-else class="img21" src="../imgs/img_32.PNG"/></span>
+			<span :class="(back==3)?'txt_c1':''" onclick="tit2(3)">游玩线路 <img v-if="back==3" class="img21" src="../imgs/img_33.PNG"/><img v-else class="img21" src="../imgs/img_32.PNG"/></span>
+			<span :class="(back==4)?'txt_c1':''" onclick="tit2(4)">全部筛选 <img v-if="back==4" class="img21" src="../imgs/img_33.PNG"/><img v-else class="img21" src="../imgs/img_32.PNG"/></span>
+		</div>
+		
+		<!--弹出选项卡-->
+		<div v-if="back!=0" class="abs bac_b widths heights"></div>
+		<div v-if="back==1" class="abs widths b_w ts_14 txt_c2 zxb_anim" style="z-index: 100; height: 0px;">
+			<div class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+				<span class="txt_c1">综合排序</span>
+				<img class="img22" src="../imgs/img_35.PNG"/>
+			</div>
+			<div class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+				<span>新品推荐</span>
+				<img class="img23" src="../imgs/img_35.PNG"/>
+			</div>
+			<div class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+				<span>价格从低到高</span>
+				<img class="img23" src="../imgs/img_35.PNG"/>
+			</div>
+			<div class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+				<span>价格从高到低</span>
+				<img class="img23" src="../imgs/img_35.PNG"/>
+			</div>
+		</div>
+		
+		<!--列表-->
+		<div class="" style="z-index: -100;">
+			<div class="h_105 tit_bor row pad_t_5 pad_b_5">
+				<img class="w_80 h_80 fshr mar_l_13" src="../imgs/img_103.JPG"/>
+				<div class="col4 mar_l_13 pad_r_10">
+					<span class="h_35 txt_c7 ts_14">广西桂林-阳朔-漓江-龙脊巴士邮轮游4日深度游</span>
+					<div class="row3 ts_10 mar_b_-10">
+						<span class="iocn5">可订今日</span>
+						<span class="iocn6">优惠</span>
+						<span class="iocn7">推荐</span>
+					</div>
+					<div class="row ts_12">
+						<span class="txt_c4">桂林</span>
+						<span class="txt_c1 ts_11">￥<span class="ts_18"> 1472</span>起</span>
+					</div>
+				</div>
+			</div>
+			<div class="h_105 tit_bor row pad_t_5 pad_b_5">
+				<img class="w_80 h_80 fshr mar_l_13" src="../imgs/img_103.JPG"/>
+				<div class="col4 mar_l_13 pad_r_10">
+					<span class="h_35 txt_c7 ts_14">广西桂林-阳朔-漓江-龙脊巴士邮轮游4日深度游</span>
+					<div class="row3 ts_10 mar_b_-10">
+						<span class="iocn5">可订今日</span>
+						<span class="iocn6">优惠</span>
+						<span class="iocn7">推荐</span>
+					</div>
+					<div class="row ts_12">
+						<span class="txt_c4">桂林</span>
+						<span class="txt_c1 ts_11">￥<span class="ts_18"> 1472</span>起</span>
+					</div>
+				</div>
+			</div>
+			<div class="h_105 tit_bor row pad_t_5 pad_b_5">
+				<img class="w_80 h_80 fshr mar_l_13" src="../imgs/img_103.JPG"/>
+				<div class="col4 mar_l_13 pad_r_10">
+					<span class="h_35 txt_c7 ts_14">广西桂林-阳朔-漓江-龙脊巴士邮轮游4日深度游</span>
+					<div class="row3 ts_10 mar_b_-10">
+						<span class="iocn5">可订今日</span>
+						<span class="iocn6">优惠</span>
+						<span class="iocn7">推荐</span>
+					</div>
+					<div class="row ts_12">
+						<span class="txt_c4">桂林</span>
+						<span class="txt_c1 ts_11">￥<span class="ts_18"> 1472</span>起</span>
+					</div>
+				</div>
+			</div>
+			<div class="h_105 tit_bor row pad_t_5 pad_b_5">
+				<img class="w_80 h_80 fshr mar_l_13" src="../imgs/img_103.JPG"/>
+				<div class="col4 mar_l_13 pad_r_10">
+					<span class="h_35 txt_c7 ts_14">广西桂林-阳朔-漓江-龙脊巴士邮轮游4日深度游</span>
+					<div class="row3 ts_10 mar_b_-10">
+						<span class="iocn5">可订今日</span>
+						<span class="iocn6">优惠</span>
+						<span class="iocn7">推荐</span>
+					</div>
+					<div class="row ts_12">
+						<span class="txt_c4">桂林</span>
+						<span class="txt_c1 ts_11">￥<span class="ts_18"> 1472</span>起</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>	
+	</body>
+</html>
+<script src="../js/mui.min.js"></script>
+<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	mui.init()
+	var app = new Vue({
+		el:'#app',
+		data:{
+			tit1: 0,
+			back: 0
+		}
+	});
+	
+
+</script>
+<script type="text/javascript">
+	function tit1(n){
+		app.tit1 = n;
+	}
+	function tit2(n){
+		if(n == app.back)
+			app.back = 0;
+		else	
+			app.back = n;
+	}
+</script>

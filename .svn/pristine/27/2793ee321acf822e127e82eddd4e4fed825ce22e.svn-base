@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>管理收货地址</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+</head>
+
+<body>
+	<!--标题-->
+	<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
+		<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
+		<h1 class="mui-title">管理收货地址</h1>
+	</header>
+	
+	<div class="mui-content mar_t_-9">
+		<div class="col4 h_118 b_w mar_t_10 txt_c2 pad_t_10 pad_b_10 pad_l_15 pad_r_15">
+			<div class="row txt_c5 ts_16">
+				<span>陈韩寒</span>
+				<span>13622223567</span>
+			</div>
+			<span class="ts_13">湖北省武汉市洪山区关山大道光谷软件园</span>
+			<span class="br3"></span>
+			<div class="row ts_12">
+				<span><img class="img2 mar_r_5" src="../imgs/img_41.png"/>默认地址</span>
+				<span><img class="img2 mar_r_5" src="../imgs/img_28.png"/>编辑  <img class="img2 mar_r_5 mar_l_20 " src="../imgs/img_29.png"/> 删除</span>
+			</div>
+		</div>
+		
+		<div class="col4 h_118 b_w mar_t_10 txt_c2 pad_t_10 pad_b_10 pad_l_15 pad_r_15">
+			<div class="row txt_c5 ts_16">
+				<span>陈韩寒</span>
+				<span>13622223567</span>
+			</div>
+			<span class="ts_13">湖北省武汉市洪山区关山大道光谷软件园</span>
+			<span class="br3"></span>
+			<div class="row ts_12">
+				<span><img class="img2 mar_r_5" src="../imgs/img_30.png"/>默认地址</span>
+				<span><img class="img2 mar_r_5" src="../imgs/img_28.png"/>编辑  <img class="img2 mar_r_5 mar_l_20 " src="../imgs/img_29.png"/> 删除</span>
+			</div>
+		</div>
+		
+		<div class="fix_but b_w">
+			<div class="txt_cw ts_16 but_bac mar_13">
+				添加新地址
+			</div>
+		</div>
+		
+	</div>	
+	
+</body>
+
+</html>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init()
+</script>

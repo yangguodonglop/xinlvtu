@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>确认订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body>
+		<!--标题-->
+		<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
+			<h1 class="mui-title">确认订单</h1>
+		</header>
+		
+		<!--地址信息-->
+		<div class="mui-content">
+			<div class="b_w mar_t_1 h_84 col3">
+				<div class="row3 h_80 widths">
+					<div class="col3 mar_t_10 txt_c2">
+						<span class="ts_16 mar_l_30 mar_t_10">陈韩寒 <span class="mar_l_20">13622223567</span></span>
+						<span class="ts_13 mar_10 pad_b_10"> <img class="img5 mar_r_10" src="../imgs/img_26.PNG"/>湖北省武汉市洪山区 关山大道 光谷软件园</span>
+					</div>
+					<img class="img6 mar_r_15" src="../imgs/img_25.png"/>
+				</div>
+				<img class="widths" src="../imgs/img_27.jpg"/>
+			</div>
+		</div>
+		
+		<!--产品信息-->
+		<div class="b_w mar_t_10">
+			<div class="row h_115 pad_10">
+				<img class="img16 fshr" src="../imgs/img_18.jpg"/>
+				<div class="col4 heights mar_l_20">
+					<span class="ts_15 txt_c2">唐麦 F3耳机入耳式 重低音炮手机电脑音乐有线耳塞通用带麦 </span>
+					<span class="txt_c1 ts_17">575<span class="txt_c4 ts_12 pad_l_10">积分</span></span>
+				</div>
+			</div>
+			<div class="br2"></div>
+			<div class="row h_56 pad_l_15 pad_r_15 ts_14 txt_c2">
+				<span>购买数量</span>
+				<div class="row w_81">
+					<a class="but1" href="#">-</a>
+					<span class="but_txt">1</span>
+					<a class="but1" href="#" style="line-height: 27px;">+</a>
+				</div>
+			</div>
+			<div class="br2"></div>
+			<div class="row h_44 pad_l_15 pad_r_15 ts_14 txt_c2">
+				<span>配送方式</span>
+				<span>运费&nbsp;&nbsp;免邮 <img class="img17 mar_l_10" src="../imgs/img_25.png"/></span>
+			</div>
+		</div>
+		
+		<!--提交信息-->
+		<div class="fix_but1 row">
+			<span class="ts_12 txt_c2 mar_l_20">应扣积分：<span class="ts_20 txt_c1">575</span></span>
+			<span class="wid_42 but_bac1">提交订单</span>
+		</div>
+		
+	</body>
+
+</html>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init()
+</script>

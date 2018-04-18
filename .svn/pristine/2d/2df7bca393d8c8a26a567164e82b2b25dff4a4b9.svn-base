@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单填写</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body>
+		<!--标题-->
+		<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
+			<h1 class="mui-title">订单填写</h1>
+		</header>
+		
+		<div class="mui-content">
+			<!--用户是否登录-->
+			<div class="order_txt1">
+				可先<span class="txt_c6">登录</span>享受更多优惠
+			</div>
+			<div class="order_txt1" style="display: none;">
+				需要手机<span class="txt_c6">认证</span>后才可提交订单
+			</div>
+			
+			<!--订单商品-->
+			<div class="b_w mar_t_1 row pad_l_15 pad_r_10 pad_t_10 pad_b_10">
+				<img class="img19" src="../imgs/img_103.JPG"/>
+				<div class="col4 mar_l_20 h_80">
+					<span class="ts_16 ts_w_600 txt_c2">摩天轮平日天空票</span>
+					<span class="ts_10 txt_c3"><img class="img20" src="../imgs/img_40.png"/>不支持退改</span>
+					<span class="ts_12 txt_c4">订票须知 ></span>
+				</div>		
+			</div>
+			
+			<!--日期选择、购买数量-->
+			<div class="b_w">
+				<span class="txt_c2 ts_14 mar_l_10">选择日期</span>
+				<div class="row mar_l_10 mar_r_10 mar_t_5">
+					<div id="date1" data-item=1 class="h_50 order_bor5 txt_c1 ts_11 mar_r_10">
+						<span id="time_1">01-13 周六</span><br />￥100
+					</div>
+					<div id="date2" data-item=2 class="h_50 order_bor txt_c2 ts_11 mar_r_10">
+						<span id="time_2">01-13 周六</span><br />￥100
+					</div>
+					<div id="date3" data-item=3 class="h_50 order_bor txt_c2 ts_11 mar_r_10">
+						<span id="time_3">01-13 周六</span><br />￥100
+					</div>
+					<div id="date4" data-item=4 class="h_50 order_bor txt_c2 ts_11">
+						更多日期>
+					</div>
+				</div>
+				<div class="row h_56 pad_l_15 pad_r_15 ts_14 txt_c2">
+					<span>购买数量</span>
+					<div class="row w_81">
+						<a class="but1" href="#">-</a>
+						<span class="but_txt">1</span>
+						<a class="but1" href="#" style="line-height: 27px;">+</a>
+					</div>
+				</div>
+			</div>
+			
+			<!--用户信息-->
+			<div class="b_w mar_t_10 txt_c2 ts_14 pad_t_15">
+				<span class="pad_l_15 ts_w_800">联系人信息</span>
+				<div class="br4 mar_t_10"></div>
+				<div class="h_44 b_w row pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600">收货人</span>
+					<input type="text" name="" id="" value="张三" placeholder="填写收货人"
+						style="border: 0; flex-grow: 1; height: 40px; margin-top: 13px; font-size: 14px;"/>
+				</div>
+				<div class="br4"></div>
+				<div class="h_44 b_w row pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600">联系电话</span>
+					<input type="number" name="" id="" value="13622223567" placeholder="填写联系电话"
+						style="border: 0; flex-grow: 1; height: 40px; margin-top: 13px; font-size: 14px;"/>
+				</div>
+				<div class="br4"></div>
+				<div class="h_44 b_w row pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600">所在地区</span>
+					<span style="flex-grow: 1;">湖北省武汉市洪山区关山街道</span>
+					<img class="img17" src="../imgs/img_25.png"/>
+				</div>
+				<div class="br4"></div>
+				<div class="h_80 b_w row1 pad_l_15 pad_r_15">
+					<span class="w_75 ts_w_600 pad_t_10">详细地址</span>
+					<textarea class="h_80 ts_14" type="text" name="" id="" value="光谷软件园" placeholder="填写联系电话"
+						style="border: 0; flex-grow: 1;">光谷软件园</textarea>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+
+</html>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init()
+</script>

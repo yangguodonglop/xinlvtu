@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的订单</title>
+	
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/domestic.css" />
+		<link rel="stylesheet" type="text/css" href="css/showLoging.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/personal_set.css" />
+<!--		<link rel="stylesheet" type="text/css" href="css/new_base.css" />
+-->		<link rel="stylesheet" type="text/css" href="css/new_style.css" />
+		<style>
+		
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<header class="mui-bar mui-bar-nav back_red bg_white">
+				<a href="javascript:void(0);" class="mui-icon mui-pull-left mui-action-back "><img class="nar_back margin_l_10" src="imgs/img_76.png"></a>
+				<h1 class="mui-title c_white c_txt1 ts_18">我的订单</h1>
+			</header>
+			<div class="my_order b_w">
+				<div class="my_order_item cl_active">未使用</div>
+				<div class="my_order_item">已使用</div>
+				<div class="my_order_item">已过期</div>
+			</div>
+			<div class="my_order_con">
+				<div class="con_item_t">
+					<!--<div class="order_bh">订单编号：78774687</div>
+					<div class="order_zt">待支付</div>-->
+				</div>
+				<div class="con_item_b">
+					<!--<div class="order_bh">订单编号：78774687</div>
+					<div class="order_zt">待支付</div>-->
+				</div>
+				
+			</div>
+
+		</div>
+	</body>
+
+</html>

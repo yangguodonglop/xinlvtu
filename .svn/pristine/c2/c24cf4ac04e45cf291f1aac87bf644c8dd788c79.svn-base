@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的邀请记录</title>
+	
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+	
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/new_style.css" />
+	</head>
+
+	<body>
+		<div id="app" v-cloak>
+			<header class="mui-bar mui-bar-nav back_red bg_white">
+				<a href="javascript:void(0);" class="mui-icon mui-pull-left mui-action-back "><img class="nar_back margin_l_10" src="imgs/img_76.png"></a>
+				<h1 class="mui-title c_white c_txt1 ">我的邀请记录</h1>
+			</header>
+			<div class="ivnitayion_jl">
+				<div class="ivnitayion_jl_num">9</div>
+				<div class="ivnitayion_jl_txt">累计邀请（人数）</div>
+			</div>
+			<div class="iv_list">
+				<div class="iv_list_tilte">我的好友</div>
+				<div class="iv_list_con">
+					<table>
+						<tr>
+							<th>序号</th><th>账号</th><th>注册时间</th>
+						</tr>
+						
+						<tr v-for="item in list">
+							<td>{{item.iv_xh}}</td><td>{{item.iv_name}}</td><td>{{item.iv_time}}</td>
+						</tr>	
+					</table>
+				</div>
+			</div>
+			
+		
+		</div>
+	</body>
+
+</html>
+<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.min.js"></script>
+<script>
+	var app= new Vue({
+		el:"#app",
+		data:{
+			list:[
+				{
+					iv_xh:"1",
+					iv_name:"小七",
+					iv_time:"2018-1-13"
+				},
+				{
+					iv_xh:"2",
+					iv_name:"159****6325",
+					iv_time:"2018-1-14"
+				},
+				{
+					iv_xh:"3",
+					iv_name:"小七2",
+					iv_time:"2018-1-15"
+				},
+				{
+					iv_xh:"4",
+					iv_name:"138****9679",
+					iv_time:"2018-1-16"
+				},
+				{
+					iv_xh:"5",
+					iv_name:"小七5",
+					iv_time:"2018-1-14"
+				},
+				{
+					iv_xh:"6",
+					iv_name:"159****3234",
+					iv_time:"2018-1-15"
+				},
+				{
+					iv_xh:"7",
+					iv_name:"小七7",
+					iv_time:"2018-1-16"
+				}
+			]
+		}
+	})
+</script>

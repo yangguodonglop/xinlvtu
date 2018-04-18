@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>产品详情单页</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<style type="text/css">
+			table,table tr th, table tr td { border:1px solid #0094ff; }
+			.float-nav-all{background-color: white; margin-left: -10px; margin-right: -10px; margin-bottom: 20px;}
+			.float-nav-list{display: flex; flex-direction: row; justify-content: space-around; list-style: none; margin: 0 auto; padding: 0;}
+			.float-nav-list li{list-style: none; height: 40px; line-height: 40px;}
+			img{max-width: 100%; height: auto;}
+		</style>
+	</head>
+	<body> 
+		<div id="app">
+		<div class="mar_b_50">
+			<!--头部-->
+			<header class="mui-bar mui-bar-nav" style="background-color: transparent; box-shadow: 0px 0px;"> 
+				<a class="mui-action-back mui-icon mui-pull-left"><img class="img15" src="../imgs/img_23.PNG"/></a>
+			</header>
+			<!-- 图片轮播 -->
+			<div class="mui-slider swiper" style="max-height: 320px;">
+			  <div id="banner_id" class="mui-slider-group mui-slider-loop">
+				<div class="mui-slider-item">
+					<img src="../imgs/img_21.jpg" />
+				</div>
+				<div class="mui-slider-item">
+					<img src="../imgs/img_20.jpg" />
+				</div>
+			  </div>
+			</div>
+			
+			<div class="pad_10 b_w mar_t_-10">
+				<span class="dom_txt">全国直飞普吉7天5晚自由行（赠机场转车接送+赠wifi+酒店自助早餐+酒店可任意搭配组合+可代订幻多奇乐园套餐门票）</span>
+		 		<div class="dom_back pad_b_10 mar_t_10 pad_t_10">
+			 		<div class="row ali h_38">
+						<div class="row ali">
+							<img class="h_38" src="../imgs/img_38.png"/>
+							<span class="ts_12 txt_c1">&nbsp;&nbsp;￥<span class="ts_18">1000</span><span class="txt_c2"> 起</span></span>
+						</div>
+						<span class="ts_12 txt_c4 pad_r_10">100%好评</span>
+					</div>  
+				</div>
+				<div class="row ali mar_t_10 pad_t_3">
+					<img class="w_25 mar_r_10" src="../imgs/img_39.PNG"/>
+					<span class="ts_13 txt_c2" style="line-height: 15px;">此产品需二次确认，商家将在12个工作小时内（工作日9:00 - 18:00)  核实是否有位。</span>
+				</div>
+			</div>
+			
+			<div class="row b_w mar_t_10 mar_b_1 h_44 ali pad_l_10 pad_r_10">
+				<span class="ts_14 c_txt1">优惠信息<span class="txt_11 c_txt5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;立减优惠&nbsp;&nbsp;&nbsp;| 点评返现 |</span></span>
+				<span class="c_txt1" style="display: none;">></span>
+			</div>
+			<div class="row_2 back_white hei_45 ali padding_l_10 padding_r_10">
+				<span class="txt_14 c_txt1">领券活动<span class="txt_11 c_txt5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满1000元减10 |&nbsp;&nbsp;&nbsp;| 满3000元减50 |</span></span>
+				<span class="c_txt1" style="display: none;">></span>
+			</div>
+			
+			<!--产品特色-->
+			<div v-html="datas.content" class="padding_10" style="overflow-x: hidden;">
+	
+			</div>
+			
+		</div>
+		
+		<!--提交订单-->
+		<div class="h_50 zxb_fixed widths back_white" style="bottom: 0;">
+			<div class="row_2 heights">
+				<div onclick="call()" class="detail_but1">
+					<img src="../images/img_44.png"/>电话咨询
+				</div>
+				<a href="javaScript:;" onclick="open_pager()" class="detail_but2">
+				<!--<a href="order.html" class="detail_but2">-->
+					<span class="c_white">提交订单</span>
+				</a>
+			</div>
+		</div>
+		
+		</div>
+	</body>
+</html>
+
+<script src="../js/mui.min.js"></script>
+<script src="../js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/showLoding.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			datas: ''
+		}
+	});
+	
+	//onload从服务器获取列表数据；
+	window.onload = function(){
+	  	//从服务器获取数据
+	  	//注意：若为ajax请求，则需将如下代码放在处理完ajax响应数据之后；
+		mui.plusReady(function(){
+			mui.showLoading("正在加载数据...","div"); 
+			var currentView = plus.webview.currentWebview();
+			mui.ajax(URLS+'/datas?id='+currentView.item, {
+				dataType:'json',//服务器返回json格式数据
+				type:'get',//HTTP请求类型
+				timeout:5000,//超时时间设置为10秒；
+				headers:{'Content-Type':'application/json'},	              
+				success:function(data){
+					//服务器返回响应，根据响应结果，分析是否登录成功；
+					//轮播图加头加尾
+					var img_arr = data.thumb;
+					img_arr.unshift(img_arr[img_arr.length-1]);
+					img_arr.push(img_arr[1]);
+					data.thumb = img_arr;
+					vm.datas = data;
+					// //轮播图  获得slider插件对象  并开启
+					setTimeout(function(){
+						var gallery = mui('.mui-slider');
+						gallery.slider({
+							interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+						});
+						mui.hideLoading();//隐藏后的回调函数 
+						set_img();
+					}, 500);
+					
+					//关闭等待框
+					plus.nativeUI.closeWaiting();
+					//显示当前页面
+					mui.currentWebview.show();
+				},
+				error:function(xhr,type,errorThrown){
+					//关闭等待框
+					plus.nativeUI.closeWaiting();
+					//显示当前页面
+					mui.currentWebview.show();
+					//异常处理;
+					mui.alert('网络异常！');
+				}
+			});
+			
+			
+			var user_id = plus.storage.getItem('user_id');
+			if(user_id != '' && user_id != null && user_id != undefined){
+				//保存一个浏览记录
+				mui.post(URLS2+'/seeProduct', {
+						customer_id: user_id,
+						product_id: currentView.item,
+					},function(data){
+						//服务器返回响应，根据响应结果，分析是否登录成功；
+						mui.hideLoading();//隐藏后的回调函数 
+						
+					},'json'
+				);
+			}
+			
+		});
+	}
+	//拨打电话
+	function call(){
+		plus.device.dial(4008700392, true);
+	}
+	//详情页跳转
+	function open_pager(){
+		//A页面中打开B页面，设置show的autoShow为false，则B页面在其loaded事件发生后，不会自动显示；
+		mui.openWindow({
+			url: 'order.html',
+			id: "order.html",
+			show:{autoShow:false},
+			extras:{
+				product_id: vm.datas.id,
+				title: vm.datas.title_top,
+				price: vm.datas.price
+			}
+		});
+	}
+	
+	function set_img(){
+		var imgs = document.getElementsByTagName('img');
+		for (var i=0; i<imgs.length; i++) {
+			if (imgs[i].dataset.src){
+				var url = imgs[i].dataset.src;
+				imgs[i].src = url;
+			}
+		}
+	}
+	
+</script>
+<script type="text/javascript">
+	(function($, doc) {
+		mui.init();
+		
+		// //按钮切换
+		// var cont = 1;
+		// $('.hei_45').on('tap', '.zxb_but', function(){
+			// $('#tit'+cont)[0].setAttribute('class', 'zxb_but');
+			// this.setAttribute('class', 'zxb_but c_txt6 txt_bor');
+			// cont = this.getAttribute('data-id'); 
+		// });
+		//
+	}(mui, document));
+</script>
