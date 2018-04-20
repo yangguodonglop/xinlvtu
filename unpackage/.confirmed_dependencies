@@ -25,7 +25,9 @@
 			"invite_friends.html",
 			"discount_coupon.html",
 			"pages/search.html",
-			"invitation_code.html"
+			"invitation_code.html",
+			"css/showLoging.css",
+			"js/showLoding.js"
 		],
 		"refer": [
 			"invite_friends.html",

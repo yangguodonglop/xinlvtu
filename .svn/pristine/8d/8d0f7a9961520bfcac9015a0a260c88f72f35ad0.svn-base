@@ -6,8 +6,8 @@
 		<title>登录</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
 	</head>
 
 	<body>
@@ -16,23 +16,23 @@
 			<a class="mui-action-back mui-pull-left"><img class="img11" src="../../imgs/left_jt.png" /></a>
 			<h1 class="mui-title">登录</h1>
 		</header>
-
+		
 		<div class="col1 ts_16 mar_t_60 txt_c2">
 			<div class="row5 margin_t_15 widths">
 				<span id="rd1" data-id=1 class="login_rd login_rd_action">账号登录</span>
 				<span id="rd2" data-id=2 class="login_rd mar_t_-2">手机验证码登录</span>
 			</div>
 			<!--账号登录-->
-			<div id="login1" class="widths col h_118">
+			<div id="login1" class="widths col h_118" >
 				<div class="login_hr mar_t_-5"></div>
-				<div class="row mar_t_-5 widths">
+				<div class="row mar_t_-5 widths">   
 					<span class="w_80 fshr mar_t_-2">账号</span>
-					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="number" id="phone1" placeholder="手机号" oninput="if(value.length>11)value=value.slice(0,11)" onblur="upperCase(1)" />
+					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="number" id="phone1" placeholder="手机号" oninput="if(value.length>11)value=value.slice(0,11)" onblur="upperCase(1)"/>
 				</div>
 				<div class="login_hr mar_t_-9"></div>
-				<div class="row mar_t_-5 widths">
-					<span class="w_80 fshr mar_t_-2">密码</span>
-					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="password" id="pw" placeholder="请输入密码" />
+				<div class="row mar_t_-5 widths">     
+					<span class="w_80 fshr mar_t_-2">密码</span>        
+					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="password" id="pw" placeholder="请输入密码"/>
 				</div>
 				<div class="login_hr mar_t_-9"></div>
 			</div>
@@ -41,12 +41,12 @@
 				<div class="login_hr mar_t_-5"></div>
 				<div class="row mar_t_-5 widths">
 					<span class="w_80 fshr mar_t_-2">手机号</span>
-					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="number" id="phone2" placeholder="手机号" oninput="if(value.length>11)value=value.slice(0,11)" onblur="upperCase(2)" />
+					<input style="border: 0; background-color: transparent; margin-top: 15px;" type="number" id="phone2" placeholder="手机号"  oninput="if(value.length>11)value=value.slice(0,11)" onblur="upperCase(2)"/>
 				</div>
 				<div class="login_hr mar_t_-9"></div>
-				<div class="row mar_t_-5 widths">
+				<div class="row mar_t_-5 widths">   
 					<span class="w_80 fshr mar_t_-2">验证码</span>
-					<input style="border: 0; background-color: transparent; flex-grow: 1; margin-top: 15px;" type="number" oninput="if(value.length>5)value=value.slice(0,5)" id="yzm" placeholder="验证码" />
+					<input style="border: 0; background-color: transparent; flex-grow: 1; margin-top: 15px;" type="number" oninput="if(value.length>5)value=value.slice(0,5)" id="yzm" placeholder="验证码"/>
 					<span class="txt_c4 login_txt" style="margin-bottom: 1px;">|</span>
 					<span class="w_110 txt_c4 fshr" id="but_yzm" onclick="get_dh()">发送验证码&nbsp;&nbsp;</span>
 				</div>
@@ -65,11 +65,11 @@
 			</div>
 			<div class="row5 mar_b_20 mar_t_10">
 				<img onclick="authLogin('weixin')" class="login_iocn" src="../../imgs/img_73.png">
-				<img onclick="authLogin('qq')" class="login_iocn" src="../../imgs/img_74.png" />
-				<img onclick="authLogin('sinaweibo')" class="login_iocn" src="../../imgs/img_75.png" style="display: none;" />
+				<img onclick="authLogin('qq')" class="login_iocn" src="../../imgs/img_74.png"/>
+				<img onclick="authLogin('sinaweibo')" class="login_iocn" src="../../imgs/img_75.png" style="display: none;"/>
 			</div>
 		</div>
-
+		
 	</body>
 
 </html>
@@ -79,26 +79,5 @@
 <script src="../../js/base_data.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../js/showLoding.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	(function($, doc) {
-		mui.init()
-		$(function() {  2
-			$.ajax({
-				type: "GET",
-				url: "http://mapi.xinlv123.com/xltx/login",
-				data: {
-					phone: 15951813234,
-					password: ygd928710,
-					login_type: 1,
-				},
-				 //headers: {'Authorization': token},
-//				beforeSend: function(request) {
-//					request.setRequestHeader("Authorization", token);
-//				},
-				success: function(result) {
-					alert("000")
-				}
-			});
-		})
-
-	}(mui, document));
+	mui.init()
 </script>

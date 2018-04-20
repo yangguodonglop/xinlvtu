@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>新增联系人</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/personal_set.css" />
+	</head>
+
+	<body>
+		<div>
+			<header class="mui-bar mui-bar-nav back_red bg_white">
+				<a href="javascript:void(0);" class="mui-icon mui-pull-left mui-action-back "><img class="nar_back margin_l_10" src="../imgs/img_76.png"></a>
+				<h1 class="mui-title c_white c_txt1 ts_18">新增联系人</h1>
+			</header>
+			<div class="col_2 ali txt_16 con_tal">
+				<div class="con_item con_item_login">
+					<div class="con_item_l c_txt1 txt_15 con_item_phone">
+						<span class="span_phone ts_15">姓名</span>
+						<input type="text" placeholder="输入姓名" class="input_item txt_14 c_txt10 ts_15" />
+					</div>
+				</div>
+				<div class="con_item con_item_login">
+					<div class="con_item_l c_txt1 txt_15 con_item_phone">
+						<span class="span_phone ts_15">电话</span>
+						<input type="text" placeholder="输入电话号码" class="input_item txt_14 c_txt10 ts_15" />
+					</div>
+				</div>
+			</div>
+
+			<div class="drop_btn">
+				<div class="btn_text c_white">确定</div>
+			</div>
+		</div>
+	</body>
+
+</html>

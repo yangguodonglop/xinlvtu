@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>国内游</title>
+
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/base_new.css" />
+		<link rel="stylesheet" type="text/css" href="css/personal_set.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/new_style.css" />
+	</head>
+
+	<body style="background: #FFFFFF;">
+		<div id="app">
+			<header class="mui-bar mui-bar-nav back_red bg_white">
+				<a href="javascript:void(0);" class="mui-icon mui-pull-left mui-action-back "><img class="nar_back margin_l_10" src="imgs/img_76.png"></a>
+				<h1 class="mui-title c_white c_txt1 ">国内游</h1>
+				<a href="javascript:void(0);" class="mui-icon mui-pull-right mui-action-back "><img class="nar_back_l margin_l_10 domestic_icon" src="imgs/img_31.png"></a>
+			</header>
+			<div class="my_order b_w">
+				<template v-for="(item,index) in list">
+					<div @click="tabswitch(index)" class="my_order_item" v-bind:class="{cl_active:item.isActive}">{{item.tabname}}</div>
+					<!--<div class="my_order_item cl_active">未使用</div>
+				<div class="my_order_item">已使用</div>
+				<div class="my_order_item">已过期</div>-->
+				</template>
+			</div>
+			<div class="travel_palce"  >
+					<!--<img class="widths margin_b_-5 margin_t_45" src="imgs/img_124.jpg"/>-->
+				<div class="tr_palce_item" style="display: block;">
+					<div class="place_item_banner">
+						<a href="#"><img src="imgs/new_img_023.png"></a>
+					</div>
+					<div class="place_item_list">
+							<ul>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+				<div class="tr_palce_item">
+					<div class="place_item_banner">
+						<a href="#"><img src="imgs/new_img_023.png"></a>
+					</div>
+					<div class="place_item_list">
+							<ul>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+				<div class="tr_palce_item">
+					<div class="place_item_banner">
+						<a href="#"><img src="imgs/new_img_023.png"></a>
+					</div>
+					<div class="place_item_list">
+							<ul>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+				<div class="tr_palce_item">
+					<div class="place_item_banner">
+						<a href="#"><img src="imgs/new_img_023.png"></a>
+					</div>
+					<div class="place_item_list">
+							<ul>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+				<div class="tr_palce_item" >
+					<div class="place_item_banner">
+						<a href="#"><img src="imgs/img_124.jpg"></a>
+					</div>
+					<div class="back_white col_1 ali padding_l_20 padding_r_20">
+						<span class="margin_t_15 txt_14 customized_tit">我要定制 · 优惠省心</span>
+						<div class="customized_hx margin_t_10"></div>
+						<div class="row_2 widths margin_t_10 txt_12 c_txt1 padding_l_10 padding_r_10">
+							<span>出发地</span><span>目的地</span>
+						</div>
+						<div class="row_2 widths margin_b_-5">
+							<input style="border: 0px; padding-left: 9px;" type="text" name="cfd" id="cfd" placeholder="武汉" />
+							<img class="customized_img margin_t_10" src="imgs/new_img_025.png" />
+							<input style="text-align:right; border: 0px; padding-right: 9px;" type="text" name="mdd" id="mdd" value="" placeholder="填写目的地" />
+						</div>
+						<div class="col_2 ali txt_16 con_tal">
+							<div class="con_item con_item_login">
+								<div class="con_item_l c_txt1 txt_15 con_item_phone">
+									<span class="span_phone ts_15">联系人</span>
+									<input type="text" placeholder="输填写你的姓名" class="input_item txt_14 c_txt10 ts_15" />
+								</div>
+							</div>
+							<div class="con_item con_item_login">
+								<div class="con_item_l c_txt1 txt_15 con_item_phone">
+									<span class="span_phone ts_15">手机号</span>
+									<input type="text" placeholder="请填写你的手机号码" class="input_item txt_14 c_txt10 ts_15" />
+								</div>
+							</div>
+							<div class="con_item con_item_login">
+								<div class="con_item_l c_txt1 txt_15 con_item_phone">
+									<span class="span_phone ts_15">留言</span>
+									<input type="text" placeholder="请填写你的特殊要求" class="input_item txt_14 c_txt10 ts_15" />
+								</div>
+							</div>
+							<div class="drop_btn">
+								<div class="btn_text c_white">立即更换</div>
+							</div>
+							
+
+						</div>
+					</div>
+					<div class="place_item_list">
+							<ul>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="item_p1">
+											<img src="imgs/new_img_024.png">
+											<span>武汉出发</span>
+										</p>
+										<p class="item_p2">
+											<span>马尔代夫Outriger奥特瑞格6-7天自由行</span>
+										</p>
+										<p class="item_p3">
+											<span class="item_span1">¥<i>499</i> 起</span>
+											<span class="item_span2">503人购买</span>
+										</p>
+									</a>
+								</li>
+							
+							</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+
+</html>
+<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.min.js"></script>
+<script>
+	var app = new Vue({
+		el: "#app",
+		data: {
+			list: [{
+					tabname: "推荐",
+					isActive: true
+				},
+				{
+					tabname: "出境",
+					isActive: false
+				},
+				{
+					tabname: "国内",
+					isActive: false
+				},
+				{
+					tabname: "国外",
+					isActive: false
+				},
+				{
+					tabname: "定制游",
+					isActive: false
+				}
+
+			]
+		},
+		methods: {
+			tabswitch: function(itemindex) {
+				var nowtab = document.querySelectorAll(".tr_palce_item");
+				len = nowtab.length
+				for(var i = 0; i < len; i++) {
+					nowtab[i].style.display = "none";
+					this.list[i].isActive = false;
+				}
+				this.list[itemindex].isActive = true;
+				nowtab[itemindex].style.display = "block";
+
+			}
+		}
+	})
+</script>

@@ -128,37 +128,4 @@ from {height:0px;}
 to {height:381px;}
 }
 
-/*新增样式修改*/
 .contacts_tit{border: 1px solid #e6e6e6; border-radius: 30px;}
-.txt_c4_active{ color: #ff7403;font-size: 17px;}
-.txt_c4_active i{ font-style: normal; color: #999999; font-size: 12px;}
-.order_iocn1 {
-    width: 15px;
-    height: 15px;
-    vertical-align: -15%;
-}
-.payment_up_down {
-    width: 23px;
-    height: 17px;
-    padding: 5px;
-}
-.payment_iocn {
-    width: 32px;
-    height: 32px;
-}
-.margin_l_15 {
-    margin-left: 15px;
-}
-.img_time{
-	width:14px ;
-	height: 14px;
-}
-.c_txt5_new{
-	color: #ff7403;;
-}
-.txt_c1_tatol{
-	font-size: 19px;
-}
-.pad_13_new{
-	padding: 2px 13px;
-}

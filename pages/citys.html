@@ -13,9 +13,10 @@
 				height: 100%;
 				overflow: hidden;
 			}
+			
 			.mui-bar {
 				-webkit-box-shadow: none;
-				box-shadow: none; 
+				box-shadow: none;
 			}
 		</style>
 	</head>
@@ -28,7 +29,7 @@
 		<div class="mui-content">
 			<div id='list' class="mui-indexed-list">
 				<div class="mui-indexed-list-search mui-input-row mui-search">
-					<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索机场">
+					<input type="search" class="mui-input-clear mui-indexed-list-search-input" id="now_vaule" placeholder="搜索机场">
 				</div>
 				<div class="mui-indexed-list-bar">
 					<a>#</a>
@@ -59,9 +60,9 @@
 					<a>Y</a>
 					<a>Z</a>
 				</div>
-			
+
 				<div class="mui-indexed-list-alert"></div>
-				
+
 				<div class="mui-indexed-list-inner">
 					<div class="mui-indexed-list-empty-alert">没有数据</div>
 					<ul class="mui-table-view">
@@ -115,7 +116,7 @@
 						<li data-value="滁州" data-tags="CZ" class="mui-table-view-cell mui-indexed-list-item">滁州</li>
 						<li data-value="慈溪" data-tags="CX" class="mui-table-view-cell mui-indexed-list-item">慈溪</li>
 						<li data-value="从化" data-tags="CH" class="mui-table-view-cell mui-indexed-list-item">从化</li>
-						<li data-value="长海" data-tags="CH" class="mui-table-view-cell mui-indexed-list-item">长海</li>	
+						<li data-value="长海" data-tags="CH" class="mui-table-view-cell mui-indexed-list-item">长海</li>
 						<li data-value="长乐" data-tags="CL" class="mui-table-view-cell mui-indexed-list-item">长乐</li>
 						<li data-value="长沙" data-tags="CS" class="mui-table-view-cell mui-indexed-list-item">长沙</li>
 						<li data-value="长治" data-tags="CZ" class="mui-table-view-cell mui-indexed-list-item">长治</li>
@@ -142,7 +143,7 @@
 						<li data-value="防城港" data-tags="FCG" class="mui-table-view-cell mui-indexed-list-item">防城港</li>
 						<li data-value="肥城" data-tags="FC" class="mui-table-view-cell mui-indexed-list-item">肥城</li>
 						<li data-value="奉化" data-tags="FH" class="mui-table-view-cell mui-indexed-list-item">奉化</li>
-						<li data-value="涪陵" data-tags="FL" class="mui-table-view-cell mui-indexed-list-item">涪陵</li>	
+						<li data-value="涪陵" data-tags="FL" class="mui-table-view-cell mui-indexed-list-item">涪陵</li>
 						<li data-value="抚顺" data-tags="FS" class="mui-table-view-cell mui-indexed-list-item">抚顺</li>
 						<li data-value="阜新" data-tags="FX" class="mui-table-view-cell mui-indexed-list-item">阜新</li>
 						<li data-value="阜阳" data-tags="FY" class="mui-table-view-cell mui-indexed-list-item">阜阳</li>
@@ -162,7 +163,7 @@
 						<li data-value="广安" data-tags="GA" class="mui-table-view-cell mui-indexed-list-item">广安</li>
 						<li data-value="广元" data-tags="GY" class="mui-table-view-cell mui-indexed-list-item">广元</li>
 						<li data-value="广州" data-tags="GZ" class="mui-table-view-cell mui-indexed-list-item">广州</li>
-						<li data-value="公主岭" data-tags="GZL" class="mui-table-view-cell mui-indexed-list-item">公主岭</li>	
+						<li data-value="公主岭" data-tags="GZL" class="mui-table-view-cell mui-indexed-list-item">公主岭</li>
 						<li data-value="古包头" data-tags="GBT" class="mui-table-view-cell mui-indexed-list-item">古包头</li>
 						<li data-value="贵港" data-tags="GG" class="mui-table-view-cell mui-indexed-list-item">贵港</li>
 						<li data-value="桂林" data-tags="GL" class="mui-table-view-cell mui-indexed-list-item">桂林</li>
@@ -251,7 +252,7 @@
 						<li data-value="莱州" data-tags="LZ" class="mui-table-view-cell mui-indexed-list-item">莱州</li>
 						<li data-value="廊坊" data-tags="LF" class="mui-table-view-cell mui-indexed-list-item">廊坊</li>
 						<li data-value="兰州" data-tags="LZ" class="mui-table-view-cell mui-indexed-list-item">兰州</li>
-						<li data-value="醴陵" data-tags="LL" class="mui-table-view-cell mui-indexed-list-item">醴陵</li>	
+						<li data-value="醴陵" data-tags="LL" class="mui-table-view-cell mui-indexed-list-item">醴陵</li>
 						<li data-value="拉萨" data-tags="LS" class="mui-table-view-cell mui-indexed-list-item">拉萨</li>
 						<li data-value="乐山" data-tags="LS" class="mui-table-view-cell mui-indexed-list-item">乐山</li>
 						<li data-value="连云港" data-tags="LYG" class="mui-table-view-cell mui-indexed-list-item">连云港</li>
@@ -313,7 +314,7 @@
 						<li data-value="普兰店" data-tags="PLD" class="mui-table-view-cell mui-indexed-list-item">普兰店</li>
 						<li data-value="普宁" data-tags="PN" class="mui-table-view-cell mui-indexed-list-item">普宁</li>
 						<li data-value="莆田" data-tags="PT" class="mui-table-view-cell mui-indexed-list-item">莆田</li>
-						<li data-value="七台河" data-tags="QTH" class="mui-table-view-cell mui-indexed-list-item">七台河</li>	
+						<li data-value="七台河" data-tags="QTH" class="mui-table-view-cell mui-indexed-list-item">七台河</li>
 						<li data-value="濮阳" data-tags="PY" class="mui-table-view-cell mui-indexed-list-item">濮阳</li>
 						<li data-group="Q" class="mui-table-view-divider mui-indexed-list-group">Q</li>
 						<li data-value="黔南" data-tags="QN" class="mui-table-view-cell mui-indexed-list-item">黔南</li>
@@ -365,10 +366,10 @@
 						<li data-value="遂宁" data-tags="SN" class="mui-table-view-cell mui-indexed-list-item">遂宁</li>
 						<li data-value="随州" data-tags="SZ" class="mui-table-view-cell mui-indexed-list-item">随州</li>
 						<li data-value="苏州" data-tags="SZ" class="mui-table-view-cell mui-indexed-list-item">苏州</li>
-						<li data-value="松江" data-tags="SJ" class="mui-table-view-cell mui-indexed-list-item">松江</li>	
+						<li data-value="松江" data-tags="SJ" class="mui-table-view-cell mui-indexed-list-item">松江</li>
 						<li data-value="邵武" data-tags="SW" class="mui-table-view-cell mui-indexed-list-item">邵武</li>
 						<li data-value="宿迁" data-tags="SQ" class="mui-table-view-cell mui-indexed-list-item">宿迁</li>
-						<li data-value="歙县" data-tags="SX" class="mui-table-view-cell mui-indexed-list-item">歙县</li>	
+						<li data-value="歙县" data-tags="SX" class="mui-table-view-cell mui-indexed-list-item">歙县</li>
 						<li data-value="宿豫" data-tags="SY" class="mui-table-view-cell mui-indexed-list-item">宿豫</li>
 						<li data-value="宿州" data-tags="SZ" class="mui-table-view-cell mui-indexed-list-item">宿州</li>
 						<li data-group="T" class="mui-table-view-divider mui-indexed-list-group">T</li>
@@ -437,7 +438,7 @@
 						<li data-value="厦门" data-tags="XM" class="mui-table-view-cell mui-indexed-list-item">厦门</li>
 						<li data-value="萧山" data-tags="XS" class="mui-table-view-cell mui-indexed-list-item">萧山</li>
 						<li data-value="宣化" data-tags="XH" class="mui-table-view-cell mui-indexed-list-item">宣化</li>
-						<li data-value="兴化" data-tags="XH" class="mui-table-view-cell mui-indexed-list-item">兴化</li>	
+						<li data-value="兴化" data-tags="XH" class="mui-table-view-cell mui-indexed-list-item">兴化</li>
 						<li data-value="辛集" data-tags="XJ" class="mui-table-view-cell mui-indexed-list-item">辛集</li>
 						<li data-value="湘阴" data-tags="XY" class="mui-table-view-cell mui-indexed-list-item">湘阴</li>
 						<li data-group="Y" class="mui-table-view-divider mui-indexed-list-group">Y</li>
@@ -471,16 +472,16 @@
 						<li data-value="榆林" data-tags="YL" class="mui-table-view-cell mui-indexed-list-item">榆林</li>
 						<li data-value="玉林" data-tags="YL" class="mui-table-view-cell mui-indexed-list-item">玉林</li>
 						<li data-value="运城" data-tags="YC" class="mui-table-view-cell mui-indexed-list-item">运城</li>
-						<li data-value="玉溪" data-tags="YX" class="mui-table-view-cell mui-indexed-list-item">玉溪</li>		
-						<li data-value="余姚" data-tags="YY" class="mui-table-view-cell mui-indexed-list-item">余姚</li>	
+						<li data-value="玉溪" data-tags="YX" class="mui-table-view-cell mui-indexed-list-item">玉溪</li>
+						<li data-value="余姚" data-tags="YY" class="mui-table-view-cell mui-indexed-list-item">余姚</li>
 						<li data-group="Z" class="mui-table-view-divider mui-indexed-list-group">Z</li>
-						<li data-value="枣庄" data-tags="ZZ" class="mui-table-view-cell mui-indexed-list-item">枣庄</li>	
-						<li data-value="增城" data-tags="ZC" class="mui-table-view-cell mui-indexed-list-item">增城</li>	
-						<li data-value="长春" data-tags="ZC" class="mui-table-view-cell mui-indexed-list-item">长春</li>	
-						<li data-value="张家港" data-tags="ZJG" class="mui-table-view-cell mui-indexed-list-item">张家港</li>	
-						<li data-value="张家界" data-tags="ZJJ" class="mui-table-view-cell mui-indexed-list-item">张家界</li>	
-						<li data-value="张家口" data-tags="ZJK" class="mui-table-view-cell mui-indexed-list-item">张家口</li>	
-						<li data-value="章丘" data-tags="ZQ" class="mui-table-view-cell mui-indexed-list-item">章丘</li>	
+						<li data-value="枣庄" data-tags="ZZ" class="mui-table-view-cell mui-indexed-list-item">枣庄</li>
+						<li data-value="增城" data-tags="ZC" class="mui-table-view-cell mui-indexed-list-item">增城</li>
+						<li data-value="长春" data-tags="ZC" class="mui-table-view-cell mui-indexed-list-item">长春</li>
+						<li data-value="张家港" data-tags="ZJG" class="mui-table-view-cell mui-indexed-list-item">张家港</li>
+						<li data-value="张家界" data-tags="ZJJ" class="mui-table-view-cell mui-indexed-list-item">张家界</li>
+						<li data-value="张家口" data-tags="ZJK" class="mui-table-view-cell mui-indexed-list-item">张家口</li>
+						<li data-value="章丘" data-tags="ZQ" class="mui-table-view-cell mui-indexed-list-item">章丘</li>
 						<li data-value="张掖" data-tags="ZY" class="mui-table-view-cell mui-indexed-list-item">张掖</li>
 						<li data-value="漳州" data-tags="ZZ" class="mui-table-view-cell mui-indexed-list-item">漳州</li>
 						<li data-value="湛江" data-tags="Zj" class="mui-table-view-cell mui-indexed-list-item">湛江</li>
@@ -508,7 +509,10 @@
 		</div>
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/mui.indexedlist.js"></script>
-		<script type="text/javascript" charset="utf-8"> 
+		<script type="text/javascript" charset="utf-8">
+			(function($, doc) {
+
+			}(mui, document));
 			mui.init();
 			mui.ready(function() {
 				var header = document.querySelector('header.mui-bar');
@@ -518,6 +522,18 @@
 				//create
 				window.indexedList = new mui.IndexedList(list);
 			});
+
+			点击返回按钮存参数
+					mui(".mui-bar").on('tap','.mui-icon',function(){
+						 var nowtext=mui("#now_vaule")[0].value
+						//  mui("#now_vaule")[0].value="11"
+						 alert(nowtext)
+					});
+			
+					
+					
+						
+						
 		</script>
 	</body>
 

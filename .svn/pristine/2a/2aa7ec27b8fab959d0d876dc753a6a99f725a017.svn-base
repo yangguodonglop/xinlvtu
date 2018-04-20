@@ -162,7 +162,7 @@ ul{list-style: none; margin: 0; padding: 0;}
 
 .iocn1{width: 4px; height: 15px; display: block; border-radius: 2px; margin: 5px;}
 .iocn2{background-color: black; opacity: 0.6; border-bottom-right-radius: 15px;}
-.action_tit{border-bottom: 1px solid white; padding-left: 10px; padding-right: 10px; color: #474747;}
+.action_tit{border-bottom: 3px solid white; padding-left: 10px; padding-right: 10px; color: #474747;}
 .action_tit1{border-bottom: 3px solid #ff7403; padding-left: 10px; padding-right: 10px; color: #ff7403;}
 
 .txt_cont{text-align: center; line-height: 44px;}

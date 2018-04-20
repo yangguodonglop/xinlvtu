@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<title>景点门票</title>
+</head>
+
+<body>
+	<div id="app">
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="imgs/left_jt.png" /></a>
+			<h1 class="mui-title">景点门票</h1>
+			<a class="mui-pull-right"><img class="w_20 mar_r_15 mar_t_5 mar_t_10" src="imgs/img_31.png"/></a>
+		</header>
+	
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content" style="background-color: #f2f4f5; margin-top: -50px;">
+		
+		<div class="mui-slider margin_b_10 mar_t_45">
+			<div class="mui-slider-group mui-slider-loop">
+				<div class="mui-slider-item"><a href="#"><img class="search_img" src="imgs/img_117-min.jpg" alt="" /></a></div>
+				<div class="mui-slider-item"><a href="#"><img class="search_img" src="imgs/img_116-min.jpg" alt="" /></a></div>
+				<div class="mui-slider-item"><a href="#"><img class="search_img" src="imgs/img_117-min.jpg" alt="" /></a></div>
+				<div class="mui-slider-item"><a href="#"><img class="search_img" src="imgs/img_116-min.jpg" alt="" /></a></div>
+		  	</div>
+		</div>
+		<!--周边热销·热门度假区-->
+		<div class="hot b_w mar_t_10 pad_b_5">
+			<!--标题-->
+			<div class="tit row">
+				<div class="ts_15 txt_c1"><img class="tit_iocn" src="imgs/img_36.png"/>人气必玩</div>
+				<div class="txt_c3 ts_13">更多 ></div> 
+			</div>
+			<!--Top 1、2、3-->
+			<div class="row pad_r_10 pad_l_10 mar_t_3 mar_b_10 txt_c2">
+				<div class="hot_show" style="width: 32%;">
+					<div class="rel"> 
+						<span class="abs hot_tit hot_c1">TOP 1</span>
+						<img class="hot_img" src="imgs/img_103.JPG"/>
+					</div>
+					<div class="col4 mar_b_5 mar_l_5">
+						<span class="ts_14 pad_r_3 mar_t_5" style="line-height: 15px;">武汉欢乐谷</span>
+						<div class="txt_c1 ts_13 mar_t_5">￥<span class="ts_17">70</span><span class="txt_c2 ts_13"> 起</span></div>
+					</div>
+				</div>
+				<div class="hot_show" style="width: 32%;">
+					<div class="rel"> 
+						<span class="abs hot_tit hot_c2">TOP 2</span>
+						<img class="hot_img" src="imgs/img_103.JPG"/>
+					</div>
+					<div class="col4 mar_b_5 mar_l_5">
+						<span class="ts_14 pad_r_3 mar_t_5" style="line-height: 15px;">武汉欢乐谷</span>
+						<div class="txt_c1 ts_13 mar_t_5">￥<span class="ts_17">70</span><span class="txt_c2 ts_13"> 起</span></div>
+					</div>
+				</div>
+				<div class="hot_show" style="width: 32%;">
+					<div class="rel"> 
+						<span class="abs hot_tit hot_c3">TOP 3</span>
+						<img class="hot_img" src="imgs/img_103.JPG"/>
+					</div>
+					<div class="col4 mar_b_5 mar_l_5">
+						<span class="ts_14 pad_r_3 mar_t_5" style="line-height: 15px;">武汉欢乐谷</span>
+						<div class="txt_c1 ts_13 mar_t_5">￥<span class="ts_17">70</span><span class="txt_c2 ts_13"> 起</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--景点推荐-->
+		<div class="mar_t_10">
+			<!--标题-->
+			<div class="tit row b_w">
+				<div class="ts_15 txt_c1"><img class="tit_iocn" src="imgs/img_36.png"/>热门景点</div>
+				<div class="txt_c3 ts_13">更多 ></div> 
+			</div>
+			<!--列表-->
+			<div class="row3 mar_t_1 pad_b_10 b_w pad_t_10 h_105">
+				<img class="w_81 h_80 mar_l_13 mar_r_15 fshr" src="imgs/img_103.JPG"/>
+				<div class="col3 pad_t_5 pad_b_5">
+					<span class="txt_14 c_txt1">武汉海昌极地海洋世界</span>
+					<div class="row_2 c_red1 padding_t_3">
+						<div class="ts_10">
+							<span class="iocn5">优惠</span>
+							<span class="iocn6">返现</span>
+							<span class="iocn7">今日可订</span>
+						</div>
+						
+					</div>
+					<div class="row widths ts_12 txt_c3">
+						<span>武汉 出发</span>
+						<div class="txt_11 txt_c1 pad_r_15">
+							￥<span class="ts_18">68</span> 起
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row3 mar_t_1 pad_b_10 b_w pad_t_10 h_105">
+				<img class="w_81 h_80 mar_l_13 mar_r_15 fshr" src="imgs/img_103.JPG"/>
+				<div class="col3 pad_t_5 pad_b_5">
+					<span class="txt_14 c_txt1">武汉海昌极地海洋世界</span>
+					<div class="row_2 c_red1 padding_t_3">
+						<div class="ts_10">
+							<span class="iocn5">优惠</span>
+							<span class="iocn6">返现</span>
+							<span class="iocn7">今日可订</span>
+						</div>
+						
+					</div>
+					<div class="row widths ts_12 txt_c3">
+						<span>武汉 出发</span>
+						<div class="txt_11 txt_c1 pad_r_15">
+							￥<span class="ts_18">68</span> 起
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		</div>
+		
+	</div>
+</body>
+
+</html>
+
+<script src="js/mui.min.js"></script>
+<script src="js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/showLoding.js" type="text/javascript" charset="utf-8"></script>
+
