@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/mui.min.js"></script>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/base_data.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<style>
+	yang
+</style>
+	<body>
+		<div id="app">
+			<div class="yang">
+				<template v-for="item in list">
+					<div>{{item.proName}}</div>
+				</template>
+			</div>
+			
+		</div>
+		<div onclick="UsertypeSelect()">点击</div>
+	</body>
+
+</html>
+	
+ 
+<script>
+	var vm =new Vue({
+		el:"#app",
+		data:{
+			list:
+			[
+//			{
+//				proName:"北京"
+//			}
+			]
+			
+			
+		},
+		mounted: function() {
+			var _this = this
+				Vue.http.jsonp('http://v.juhe.cn/usedcar/province?dtype=1&key=84909de6443bed336cb93e4047b60f98').then(function(response){
+			        // 响应成功回调
+		        alert("1111")
+//		        console.log(response)
+			       _this.list=response.data.result
+			       console.log(this.list)
+			    }, function(response){
+			    	alert("2222")
+			        // 响应错误回调
+			    });
+	    },
+	    methods:{
+	    	getdata:function(){
+//	    		Vue.http.jsonp('http://v.juhe.cn/usedcar/province?dtype=1&key=84909de6443bed336cb93e4047b60f98').then(function(response){
+//			        // 响应成功回调
+//			        alert("1111")
+//			       this.list=response.data
+//			    }, function(response){
+//			    	alert("2222")
+//			        // 响应错误回调
+//			    });
+	    	}
+	    }
+	})
+	$.ajax({
+		//          url:"http://localhost:8081/rest/itemcat/list?callback=getMessage",  
+//		url: "http://v.juhe.cn/usedcar/province?dtype=1&key=84909de6443bed336cb93e4047b60f98",
+//		type: "get",
+//		cache: false,
+//		dataType: "jsonp",
+//		jsonp: "callback", //这里定义了callback的参数名称，以便服务获取callback的函数名即getMessage  
+//		jsonpCallback: "getMessage", //这里定义了jsonp的回调函数  
+//		success: function(data) {
+//			var infostr = JSON.stringify(data);//转换json
+//			sessionStorage.data = infostr;
+//			//          	for(var i=0;i<data.length;i++){
+//			//          		
+//			//          	}
+//			console.log(data)
+//		},
+//		error: function() {
+//			alert("发生异常");
+//		}
+	});
+
+	function UsertypeSelect() {
+		if(sessionStorage.data != '') {
+			alert("1111")
+	} 
+	else {
+//		$.ajax({
+//			'url: "http://v.juhe.cn/usedcar/province?dtype=1&key=84909de6443bed336cb93e4047b60f98",
+//			data: {
+//				"kind": "role",
+//				"roleid": JSON.parse(localStorage.roleData).id// 此处的值也是从localStorage取出的。 "userid": localStorage.userId
+//			},
+//			success: function(data) {
+//				if(data != "") {
+//					var obj = eval(data);
+//					var gettpl = document.getElementById('getUsertypeTpl').innerHTML;
+//					laytpl(gettpl).render(obj, function(html) {
+//						document.getElementById('usertypeSelectEdit').innerHTML = html;
+//					});
+//				};
+//			},
+//			error: function(XMLHttpRequest, textStatus, errorThrown) {
+//				ShowQuestDataErrMsg();
+//			}
+//		});'
+	}
+	}
+
+	
+</script>

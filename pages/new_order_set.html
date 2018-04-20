@@ -12,7 +12,7 @@
 
 	<body>
 		<!--标题-->
-		<div id="#app">
+		<div id="app">
 		<header class="mui-bar mui-bar-nav b_w" style="box-shadow: none;">
 			<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
 			<h1 class="mui-title">订单填写</h1>
@@ -42,25 +42,28 @@
 			<div class="b_w">
 				<span class="txt_c2 ts_14 mar_l_10">选择日期</span>
 				<div class="row mar_l_10 mar_r_10 mar_t_5">
-					<div id="date1" data-item=1 class="h_50 order_bor5 txt_c1 ts_11 mar_r_10">
-						<span id="time_1">01-13 周六</span><br />￥100
+					<template v-for="(item,$index) in list"> 
+					<div id="date1" data-item=1 class="h_50 order_bor txt_c2 ts_11 mar_r_10" :class="{'order_bor5':curr==item}" @click="choiceDate(item)">
+						<span class="time_1">{{item.nums}}</span><br /><i style="font-style: normal;">{{item.price}}</i>
 					</div>
-					<div id="date2" data-item=2 class="h_50 order_bor txt_c2 ts_11 mar_r_10">
-						<span id="time_2">01-13 周六</span><br />￥100
+					<!--<div id="date2" data-item=2 class="h_50 order_bor txt_c2 ts_11 mar_r_10" :class="{'order_bor5':curr==2}" @click="choiceDate(2)">
+						<span class="time_1">01-13 周六</span><br /><i style="font-style: normal;">￥100</i>
 					</div>
-					<div id="date3" data-item=3 class="h_50 order_bor txt_c2 ts_11 mar_r_10">
-						<span id="time_3">01-13 周六</span><br />￥100
-					</div>
+					<div id="date3" data-item=3 class="h_50 order_bor txt_c2 ts_11 mar_r_10" :class="{'order_bor5':curr==3}" @click="choiceDate(3)">
+						<span class="time_1">01-13 周六</span><br /><i style="font-style: normal;">￥100</i>
+					</div>-->
+					</template>
 					<div id="date4" data-item=4 class="h_50 order_bor txt_c2 ts_11">
 						更多日期>
 					</div>
+					
 				</div>
 				<div class="row h_56 pad_l_15 pad_r_15 ts_14 txt_c2">
 					<span>购买数量</span>
 					<div class="row w_81">
-						<a class="but1" href="#">-</a>
-						<span class="but_txt">1</span>
-						<a class="but1" href="#" style="line-height: 27px;">+</a>
+						<a class="but1"  href="#" @click="but_add()">-</a>
+						<span class="but_txt">{{foodNum}}</span>
+						<a class="but1" href="#" @click="but_reduce()" style="line-height: 27px;">+</a>
 					</div>
 				</div>
 			</div>
@@ -96,10 +99,10 @@
 			<!--提交信息-->
 		<div class="fix_but1 row">
 			<span class="ts_12 txt_c2 mar_l_20">应付：<span class="ts_20 txt_c1">¥2975</span></span>
-			<span class="wid_42 but_bac1" @click="tj_order()">提交订单</span>
+			<span class="wid_42 but_bac1" @click="goto_item()">提交订单</span>
 		</div>
 		<!--阅读并同意-->
-			<div class="margin_10 padding_l_10 txt_12 c_txt1 login_hyxy" style="color: #474747; font-size: 12px; padding: 10px 0px 30px 15px;"><img class="order_iocn1" src="../imgs/img_41.png"/> <span class="c_txt2" style="color: #b8b8b8; font-size: 12px;">&nbsp;&nbsp;&nbsp;已阅读并同意</span>&nbsp;&nbsp;心旅天下预定条款</div>
+			<div class="margin_10 padding_l_10 txt_12 c_txt1 login_hyxy"　@click="choiceDate1()" style="color: #474747; font-size: 12px; padding: 10px 0px 30px 15px;"><img class="order_iocn1" src="../imgs/img_41.png"/> <span class="c_txt2" style="color: #b8b8b8; font-size: 12px;">&nbsp;&nbsp;&nbsp;已阅读并同意</span>&nbsp;&nbsp;心旅天下预定条款</div>
 			
 		</div>
 		</div>
@@ -118,10 +121,66 @@
 			 str3: '15951813234',
             getStr: null,
 			action : true,
+			 foodNum: 0,
+			 curr:'',
+			 list:[
+			 	{
+			 	nums:"01-13周六",
+			 	price:"$100"
+			 	},
+			 	{
+			 	nums:"01-14周六",
+			 	price:"$200"
+			 	},
+			 	{
+			 	nums:"01-15周六",
+			 	price:"$100"
+			 	}
+			 ]
+			
+		},
+		mounted:function(){
+		
 		},
 		methods:{
-			tj_order:function(){
-				alert("000")
+			choiceDate1 :function(){
+				vm.action = !vm.action
+				 if(vm.action==true){  
+                    vm.action = false 
+                }else{  
+                     vm.action = true  
+                } 
+			},
+			choiceDate:function(item){
+				this.curr=item
+
+			},
+			but_add:function(){
+			vm.foodNum--
+		if(vm.foodNum<0){
+			vm.foodNum=0
+		}
+			},
+			but_reduce:function(){
+			vm.foodNum++	
+			},
+			goto_item:function(){
+				var reg=11 && /^((13|14|15|17|18)[0-9]{1}\d{8})$/;
+                //var url="/nptOfficialWebsite/apply/sendSms?mobile="+this.ruleForm.phone;
+                 if(vm.str==''){
+                   alert("不能输入为空");
+                };
+                if(vm.str2==''){
+                   alert("请输入手机号码");
+                }else if(!reg.test(vm.str2)){
+                    alert("手机格式不正确");
+                };
+                if(vm.action == false){
+                	alert("请仔细阅读条款")
+                }
+				
+				
+			console.log(vm.str+"*"+vm.str2+"*"+vm.foodNum+'*'+"*"+vm.curr.nums+"*"+vm.curr.price)
 			}
 		}
 	});
