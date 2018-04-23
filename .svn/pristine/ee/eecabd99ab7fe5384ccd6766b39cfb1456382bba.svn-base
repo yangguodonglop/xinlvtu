@@ -5,8 +5,8 @@
 		<title>订单支付</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
-<!--		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css"/>
--->		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/base_new.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		
@@ -58,7 +58,7 @@
 		<!--确认支付-->
 		<div class="fix_but1 row">
 			<span class="ts_12 txt_c2 mar_l_20">应付：<span class="ts_20 txt_c1">¥2975</span></span>
-			<span class="wid_42 but_bac1">确认支付</span>
+			<span class="wid_42 but_bac1">提交订单</span>
 		</div>
 		</div>
 	</body>
@@ -176,30 +176,6 @@
 		});
 	}(mui, document));
 </script>
-<script type="text/javascript" charset="utf-8">
-          mui.init();
-        //B页面onload从服务器获取列表数据；
-        window.onload = function(){
-        	
-            //从服务器获取数据
-            
-            //业务数据获取完毕，并已插入当前页面DOM；
-            //注意：若为ajax请求，则需将如下代码放在处理完ajax响应数据之后；
-            mui.plusReady(function(){
-            	
-                var self = plus.webview.currentWebview();
-                var name = self.name;
-               
-                console.log(name);
-                //关闭等待框
-                plus.nativeUI.closeWaiting();
-                //显示当前页面
-                mui.currentWebview.show();
-            });
-        }
-        
-    </script>
-
 
 
 

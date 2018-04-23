@@ -29,12 +29,12 @@
 
 				<!--订单商品-->
 				<div class="b_w mar_t_1 row pad_l_15 pad_r_10 pad_t_10 pad_b_10">
-					<img class="img19 fshr" :src="list1.thumb" />
+					<img class="img19 fshr" src="../imgs/img_103.JPG" />
 					<div class="col4 mar_l_20 h_80">
-						<span class="ts_16 ts_w_600 txt_c2">{{list1.title}}</span>
+						<span class="ts_16 ts_w_600 txt_c2">巴厘岛4晚五日游，武汉直飞，全程不换酒店，南湾含香蕉船一次</span>
 						<!--<span class="ts_10 txt_c3"><img class="img20" src="../imgs/img_40.png"/>不支持退改</span>
 					<span class="ts_12 txt_c4">订票须知 ></span>-->
-						<span class="ts_12 txt_c4 txt_c4_active">{{list1.suggest_price}}<i>元</i></span>
+						<span class="ts_12 txt_c4 txt_c4_active">2975<i>元</i></span>
 					</div>
 				</div>
 
@@ -103,15 +103,12 @@
 
 			</div>
 		</div>
-		<a  id="test" href="new_payment.html">  </a>
 	</body>
 
 </html>
 <script src="../js/mui.min.js"></script>
+<script src="../js/base_data.js"></script>
 <script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="../js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
-<script src="../js/base_data.js" type="text/javascript" charset="utf-8"></script>
-<script src="../js/showLoding.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	mui.init()
 	var vm = new Vue({
@@ -122,13 +119,11 @@
 			contents: '光谷软件园软件园',
 			getStr: null,
 			action: true,
-			product_id:"12336",
+			product_id:"1",
 			num: 0,
 			isactive:true,
 			curr: '',
 			curr1: '',
-			list1:[
-			],
 			list: [{
 					start_time: "2018-01-13",
 					sale: "100"
@@ -145,15 +140,6 @@
 
 		},
 		mounted: function() {
-				var strStoreid = window.sessionStorage? sessionStorage.getItem("id_item"): Cookie.read("id_item");
-				console.log(strStoreid)
-				Vue.http.get(order_fill+'?id='+strStoreid).then(function(respones){
-					console.log(respones.body.data)
-					vm.list1=respones.body.data
-					console.log(vm.list1)
-				},function(err){
-					
-				})
 
 		},
 		methods: {
@@ -203,24 +189,13 @@
 					mui.alert('请仔细阅读条款');
 					return
 				}
-				let data = {
-					product_id:vm.product_id,
-					phone:vm.phone,
-					name:vm.name,
-					contents:vm.contents,
-					start_time:vm.curr.start_time,
-					num:vm.num,
-					sale:vm.curr.sale	
-				}
-				//let nowurl='product_id='+vm.product_id+'&phone='+vm.phone+'&name='+vm.name+'&contents='+vm.contents+'&start_time='+vm.curr.start_time+'&num='+vm.num+'&sale='+vm.curr.sale
-				//let nowurl1=URLS+'/makeOrder?'+nowurl
-				console.log(data)
-				Vue.http.options.emulateJSON = true;
-				Vue.http.post(SCORDERURL+'/makeOrder',data).then(function(response){
-					window.location.href="new_payment.html"
-                    
+				let nowurl='product_id='+vm.product_id+'&phone='+vm.phone+'&name='+vm.name+'&contents='+vm.contents+'&start_time='+vm.curr.start_time+'&num='+vm.num+'&sale='+vm.curr.sale
+				let nowurl1=URLS+'/makeOrder?'+nowurl
+				alert(nowurl1)
+				Vue.http.post(URLS+'/makeOrder?'+nowurl).then(function(){
+					alert("111")
 				},function(err){
-					mui.toast('网络不可用，请检查网络');
+					alert("2222")
 				})
 
 			}

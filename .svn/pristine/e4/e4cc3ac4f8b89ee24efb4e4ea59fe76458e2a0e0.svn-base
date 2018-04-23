@@ -1,0 +1,4 @@
+URL = 'http://mapi.xinlv123.com/xltx';
+URLS = URL+'/mobile';
+
+

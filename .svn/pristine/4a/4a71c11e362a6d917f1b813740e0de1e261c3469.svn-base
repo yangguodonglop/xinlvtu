@@ -162,9 +162,7 @@
 					"pages/search.html",
 					"invitation_code.html",
 					"css/showLoging.css",
-					"js/showLoding.js",
-					"pages/new_order_set.html",
-					"pages/details.html"
+					"js/showLoding.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -218,50 +216,6 @@
 					"css/mui.min.css",
 					"css/personal_set.css",
 					"imgs/img_76.png"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"pages/new_order_set.html": {
-				"resources": [
-					"imgs/left_jt.png",
-					"imgs/img_41.png",
-					"imgs/img_78.png",
-					"imgs/img_103.JPG",
-					"css/index.css",
-					"css/base.css",
-					"css/mui.min.css",
-					"pages/new_payment.html"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"pages/details.html": {
-				"resources": [
-					"imgs/img_39.PNG",
-					"css/index.css",
-					"css/base.css",
-					"fonts/mui.ttf",
-					"css/mui.min.css",
-					"imgs/img_44.png",
-					"imgs/img_38.png",
-					"pages/new_order_set.html"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"pages/new_payment.html": {
-				"resources": [
-					"css/index.css",
-					"imgs/img_wx.png",
-					"imgs/img_zfb.png",
-					"css/base.css",
-					"imgs/img_51.png",
-					"css/base_new.css",
-					"css/mui.min.css",
-					"imgs/img_50.png",
-					"css/personal_set.css",
-					"imgs/new_img_027.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -359,6 +313,7 @@
 				"imgs/img_104-min.jpg",
 				"pages/receive_list.html",
 				"imgs/new_img_012.gif",
+				"imgs/img_41.png",
 				"about_us.html",
 				"imgs/img_30.png",
 				"imgs/fwcn.png",

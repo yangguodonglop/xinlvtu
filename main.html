@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>欣旅天下</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab" id="zxb_bar" style="z-index: 9999;">
+			<a id="defaultTab" data-id=1 class="mui-tab-item mui-active" href="index.html">
+				<span class="mui-icon"> <img id="img_1" class="h_22" src="imgs/img_52.PNG"/></span>
+				<span id="txt_1" class="mui-tab-label txt_c1">首页</span>
+			</a>
+			<a data-id=2 class="mui-tab-item" href="doorTicket.html"> 
+				<span class="mui-icon"> <img id="img_2" class="h_22" src="imgs/img_55.png"/></span>
+				<span id="txt_2" class="mui-tab-label txt_c2">景点门票</span>
+			</a>  
+			<a data-id=3 class="mui-tab-item" href="find.html">
+				<span class="mui-icon"> <img id="img_3" class="h_22" src="imgs/img_57.png"/></span>
+				<span id="txt_3" class="mui-tab-label txt_c2">发现</span>
+			</a>
+			<a data-id=4 class="mui-tab-item" href="integral.html">
+				<span class="mui-icon"> <img id="img_4" class="h_22" src="imgs/img_59.png"/></span>
+				<span id="txt_4" class="mui-tab-label txt_c2">积分商城</span>
+			</a>
+			<a data-id=5 class="mui-tab-item" href="me.html">
+				<span class="mui-icon"> <img id="img_5" class="h_22" src="imgs/img_61.png"/></span>
+				<span id="txt_5" class="mui-tab-label txt_c2">我的</span>
+			</a>
+		</nav>
+		<script src="js/mui.min.js"></script> 
+		<script type="text/javascript" charset="utf-8">
+			 //mui初始化
+			mui.init();
+			var subpages = ['index.html', 'doorTicket.html', 'find.html', 'integral.html', 'me.html']; 
+			var subpage_style = {
+				top: '0px',
+				bottom: '51px' 
+			};
+			  
+			var aniShow = {};
+			
+			//创建子页面，首个选项卡页面显示，其它均隐藏；
+			mui.plusReady(function() {
+				// 设置系统状态栏背景为红色
+				plus.navigator.setStatusBarBackground('#ff7403');
+				var self = plus.webview.currentWebview();
+				for (var i = 0; i < 5; i++) {
+					var temp = {};
+					var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
+					if (i > 0) {
+						sub.hide();
+					}else{
+						temp[subpages[i]] = "true";
+						mui.extend(aniShow,temp);
+					}
+					self.append(sub);
+				}
+			});
+
+			//当前激活选项
+			var activeTab = subpages[0];
+			var targetTab = '';
+			 //监听点击事件
+			(function($, doc) {
+				//选项卡点击事件
+				mui('.mui-bar-tab').on('tap', 'a', function(e) {
+					targetTab = this.getAttribute('href');
+					if (targetTab == activeTab) 
+						return;
+					var item = this.getAttribute('data-id');
+					
+					select_pager(item);
+				});
+			}(mui, document));
+			
+			//子页面的传递
+			function children(n, href){
+				targetTab = href;
+				select_pager(n);
+			}
+			
+			var img1 = ['imgs/img_53.png','imgs/img_55.png', 'imgs/img_57.png', 'imgs/img_59.png', 'imgs/img_61.png'];
+			var img2 = ['imgs/img_52.png','imgs/img_54.png', 'imgs/img_56.png', 'imgs/img_58.png', 'imgs/img_60.png'];
+			function select_pager(item){
+				//修改按钮颜色
+				for (var i=1; i<6; i++) {
+					mui('#img_'+i)[0].setAttribute('src', img1[i-1]);
+					mui('#txt_'+i)[0].setAttribute('class', 'mui-tab-label txt_c2');
+				}
+				mui('#img_'+item)[0].setAttribute('src', img2[item-1]);
+				mui('#txt_'+item)[0].setAttribute('class', 'mui-tab-label txt_c1');
+		
+				//显示目标选项卡
+				//若为iOS平台或非首次显示，则直接显示
+				if(mui.os.ios||aniShow[targetTab]){
+					plus.webview.show(targetTab);
+				}else{
+					//否则，使用fade-in动画，且保存变量
+					var temp = {};
+					temp[targetTab] = "true";
+					mui.extend(aniShow,temp);
+					plus.webview.show(targetTab,"fade-in",300);
+				}
+				//隐藏当前;
+				plus.webview.hide(activeTab);
+				//更改当前活跃的选项卡
+				activeTab = targetTab;
+			}
+		</script>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1252963663'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/stat.php%3Fid%3D1252963663%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
