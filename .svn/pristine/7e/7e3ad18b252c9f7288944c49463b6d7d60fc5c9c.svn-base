@@ -14,10 +14,9 @@
 	<body>
 		<div id="app">
 			<!--头部-->
-			<!--			<a href="pages/details.html">点击</a>
--->
-			<div class="row h_44 txt_cw ts_14 linear_tit_back">
-				<div class="mar_l_20" @click="addresslink()">{{places}} <img class="img1 mar_l_5" src="imgs/img_01-min.png" alt="" /></div>
+<!--			<a href="pages/details.html">点击</a>
+-->			<div class="row h_44 txt_cw ts_14 linear_tit_back">
+				<div class="mar_l_20" @click="addresslink()">武汉 <img class="img1 mar_l_5" src="imgs/img_01-min.png" alt="" /></div>
 				<div class="tit_back"><img class="img2 mar_r_5" src="imgs/img_02-min.png" alt="" /> 目的地/关键词</div>
 				<img class="img3 mar_r_20" src="imgs/logo(96x96).png" />
 			</div>
@@ -59,7 +58,7 @@
 				<!--文字-->
 				<div :class="(mag_t < -35)?'index_tit_fix tit_bor':'index_tit_fix1 tit_bor'">
 					<div class="row mar_l_20 mar_r_20">
-						<span :class="(cur_page == 0)?'action_tit1':'action_tit'" @click="goto_item(0)">推荐</span>
+						<span :class="(cur_page == 0)?'action_tit1':'action_tit'" @click="goto_item(0)">推荐1</span>
 						<span :class="(cur_page == 1)?'action_tit1':'action_tit'" @click="goto_item(1)">出境游</span>
 						<span :class="(cur_page == 2)?'action_tit1':'action_tit'" @click="goto_item(2)">国内游</span>
 						<span :class="(cur_page == 3)?'action_tit1':'action_tit'" @click="goto_item(3)">周边游</span>
@@ -154,8 +153,6 @@
 	var app = new Vue({
 		el: '#app',
 		data: {
-
-			places: "武汉",
 			navs: '',
 			navs1: '',
 			banner: '',
@@ -171,26 +168,6 @@
 			(function($, doc) {
 
 			}(mui, document));
-
-			//获取城市传过来的ID
-			var js_citys_id = window.sessionStorage ? sessionStorage.getItem("get_city_ids") : Cookie.read("get_city_ids");
-			if(js_citys_id == null) {
-
-				this.places = "武汉"
-			} else {
-
-				this.places = js_citys_id
-			}
-			let data={
-				city:js_citys_id
-			}
-			//首页位置切换
-			Vue.http.options.emulateJSON = true;
-			Vue.http.post(URLS+'/city',data).then(function(respones) {
-
-			}, function(err) {
-				mui.toast('网络不可用，请检查网络');
-			});
 
 			//轮播下导航
 			Vue.http.get(URLS + '/menu').then(function(respones) {
@@ -208,7 +185,7 @@
 				app.navs = new_nav;
 				app.navs1 = new_nav1;
 			}, function(err) {
-					mui.toast('网络不可用，请检查网络');
+
 			});
 
 			//获取轮播图
@@ -231,6 +208,7 @@
 				app.dt3 = response.body.data.recommend;
 				app.dt4 = response.body.data.tour_around;
 				mui.hideLoading();
+				console.log(app.dt1)
 				//延时动态修改页面图片的高度
 				setTimeout(function() {
 					var aImg = document.getElementsByClassName('zxb_img');
@@ -259,11 +237,7 @@
 
 				var mTop = document.getElementById('txt_tit').offsetTop;
 				//减去滚动条的高度
-				var sTop;
-				if(document.documentElement && document.documentElement.scrollTop)
-					sTop = document.documentElement.scrollTop;
-				else if(document.body)
-					sTop = document.body.scrollTop;
+				var sTop = document.documentElement.scrollTop;
 				var result = mTop - sTop;
 				app.mag_t = result;
 
@@ -294,16 +268,14 @@
 			//			this.getdata();
 		},
 		methods: {
-			addresslink: function() {
-				window.location.href = "pages/citys.html"
-			},
+			addresslink: function() {},
 			goto_item: function(n) {
 				window.scrollTo(0, document.getElementById('gt_img' + (n + 1)).offsetTop - 47);
 			},
 			//点击跳转页面传递ID参数
 			go_url: function(item) {
 				var product_id = item.id
-
+			
 				if(window.sessionStorage) {
 					sessionStorage.setItem("id_item", product_id);
 				} else {
@@ -314,3 +286,4 @@
 		}
 	});
 </script>
+

@@ -32,12 +32,6 @@
 								<div @click="choicetab(item,$index)" class="my_order_item" v-bind:class="{'bottom_bor5':curr1==$index}">{{item.nowtab}}</div>
 							</template>
 						</div>
-						<!--						<a class="mui-control-item " :class="{'bottom_bor5':curr1==$index}"  @click="choicetab()">{{item.nowtab}}</a>
--->
-						<!--<a class="mui-control-item">待付款</a>
-					<a class="mui-control-item" >已完成</a>
-					<a class="mui-control-item" >进行中</a>-->
-
 
 						<div class="mui-slider-group" id="action_hei" style=" background: #F5F5F5;">
 							<div class="my_order_new">
@@ -56,10 +50,10 @@
 											</a>
 										</p>
 										<p class="item_p3">
-											<a href="#">
+											<a href="javascript:void(0)">
 												取消订单
 											</a>
-											<a href="#" class="zf_bth">
+											<a href="javascript:void(0)" class="zf_bth" @click="go_url(item)">
 												{{item.status}}
 											</a>
 										</p>
@@ -101,65 +95,69 @@
 				}
 			],
 			list: [
-			
+
 			]
 		},
 		mounted: function() {
 			//获取订单数据列表
-			Vue.http.get(SCORDERURL+'/orderList' + '?type=1').then(function(respones) {
+			Vue.http.get(SCORDERURL + '/orderList' + '?type=1').then(function(respones) {
 				//console.log(respones.body.data)
-//				console.log(respones.body.data)
-//				console.log(vm.list)
+							console.log(respones.body.data)
+								
 				vm.list = respones.body.data
-				for(var i=0;i<vm.list.length;i++){
-					if(vm.list[i].status==1){
-					vm.list[i].status="立即支付"
-				}
-					else{
-					vm.list[i].status="重新购买"	
+				console.log(vm.list)
+				for(var i = 0; i < vm.list.length; i++) {
+					if(vm.list[i].status == 1) {
+						vm.list[i].status = "立即支付"
+					} else {
+						vm.list[i].status = "重新购买"
 					}
-					
+
 				}
-				
+
 			}, function(err) {
 
 			})
 		},
 		methods: {
 			//点击tab进行数据筛选
-			choicetab: function(item,$index) {
-				let _this=this
-				vm.curr =item
+			choicetab: function(item, $index) {
+				let _this = this
+				vm.curr = item
 				vm.curr1 = $index
-				let now_index=$index+1
-			
-				Vue.http.get(SCORDERURL+'/orderList' + '?type='+now_index).then(function(respones) {
-				
-				vm.list = respones.body.data
-				
-							for(var i=0;i<vm.list.length;i++){
-					if(vm.list[i].status==1){
-					vm.list[i].status="立即支付"
-				}
-					else{
-					vm.list[i].status="重新购买"	
-					}
-//					
-				}
-							
-//				else{
-//					for(var i=0;i<vm.list.length;i++){
-//						vm.list[i].status="待支付"
-//					}
-//				}
-					
-					
-				this.vm.list = respones.body.data
-				
-			}, function(err) {
+				let now_index = $index + 1
 
-			})
+				Vue.http.get(SCORDERURL + '/orderList' + '?type=' + now_index).then(function(respones) {
+
+					vm.list = respones.body.data
+
+					for(var i = 0; i < vm.list.length; i++) {
+						if(vm.list[i].status == 1) {
+							vm.list[i].status = "立即支付"
+						} else {
+							vm.list[i].status = "重新购买"
+						}
+
+					}
+
+					this.vm.list = respones.body.data
+
+				}, function(err) {
+					mui.toast('网络异常！');
+				})
+			},
+			go_url:function(item){
+				var order_xq_id=item.id
+			
+
+				if(window.sessionStorage) {
+					sessionStorage.setItem("order_xq_id",order_xq_id);
+				} else {
+					Cookie.write("order_xq_id", order_xq_id);
+				}
+				window.location.href = "pages/new_order_details.html";
 			}
+			
 		}
 	})
 

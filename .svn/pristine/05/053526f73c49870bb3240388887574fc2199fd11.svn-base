@@ -5,15 +5,15 @@
 		<meta charset="UTF-8">
 		<title>登录</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="../../css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
-		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
 	</head>
 
 	<body>
 		<!--标题-->
 		<header class="mui-bar mui-bar-nav" style="box-shadow: none; border-bottom: 1px solid #e6e6e6;">
-			<a class="mui-action-back mui-pull-left"><img class="img11" src="../../imgs/left_jt.png" /></a>
+			<a class="mui-action-back mui-pull-left"><img class="img11" src="../imgs/left_jt.png" /></a>
 			<h1 class="mui-title">登录</h1>
 		</header>
 		
@@ -58,7 +58,7 @@
 				<div class="login_hr mar_t_-9"></div>
 			</div>
 			<div onclick="" class="ts_14 txt_c2 login_wjmm padding_r_20 mar_10">
-				<img class="me_iocn1" src="../../imgs/img_72.png" />&nbsp;&nbsp;忘记密码
+				<img class="me_iocn1" src="../imgs/img_72.png" />&nbsp;&nbsp;忘记密码
 			</div>
 			<span v-on:click="login" class="but_bac txt_cw width_90 mar_t_30">登录</span>
 			<span v-on:click="register" class="login_but2 width_90 mar_t_20">注册</span>
@@ -69,9 +69,9 @@
 				<span class="login_hx mar_r_10"></span>第三方账号登录<span class="login_hx mar_l_10"></span>
 			</div>
 			<div class="row5 mar_b_20 mar_t_10">
-				<img onclick="authLogin('weixin')" class="login_iocn" src="../../imgs/img_73.png">
-				<img onclick="authLogin('qq')" class="login_iocn" src="../../imgs/img_74.png"/>
-				<img onclick="authLogin('sinaweibo')" class="login_iocn" src="../../imgs/img_75.png" style=""/>
+				<img onclick="authLogin('weixin')" class="login_iocn" src="../imgs/img_73.png">
+				<img onclick="authLogin('qq')" class="login_iocn" src="../imgs/img_74.png"/>
+				<img onclick="authLogin('sinaweibo')" class="login_iocn" src="../imgs/img_75.png" style=""/>
 			</div>
 		</div>
 		
@@ -79,10 +79,10 @@
 
 </html>
 
-<script src="../../js/mui.min.js"></script>
-<script src="../../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../js/base_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/vue_resource.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/base_data.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	var login = new Vue({
 		el:'#login',
@@ -204,7 +204,7 @@
 						localStorage.expired_at = response.body.data.expired_at;//过期时间
 						localStorage.refresh_expired_at = response.body.data.refresh_expired_at;//刷新时间
 						mui.openWindow({
-							url:'../../me.html',
+							url:'../me.html',
 						});
 					}
 				}, function(err){
