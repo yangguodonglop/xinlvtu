@@ -122,7 +122,7 @@
 			contents: '光谷软件园软件园',
 			getStr: null,
 			action: true,
-			product_id:"12336",
+			product_id:"",
 			num: 0,
 			isactive:true,
 			curr: '',
@@ -150,7 +150,7 @@
 				Vue.http.get(order_fill+'?id='+strStoreid).then(function(respones){
 					console.log(respones.body.data)
 					vm.list1=respones.body.data
-					console.log(vm.list1)
+				
 				},function(err){
 					
 				})
@@ -204,21 +204,26 @@
 					return
 				}
 				let data = {
-					product_id:vm.product_id,
+					product_id:vm.list1.id,
 					phone:vm.phone,
 					name:vm.name,
 					contents:vm.contents,
 					start_time:vm.curr.start_time,
-					num:vm.num,
-					sale:vm.curr.sale	
+					num:vm.num
+					//sale:vm.curr.sale	
 				}
-				//let nowurl='product_id='+vm.product_id+'&phone='+vm.phone+'&name='+vm.name+'&contents='+vm.contents+'&start_time='+vm.curr.start_time+'&num='+vm.num+'&sale='+vm.curr.sale
-				//let nowurl1=URLS+'/makeOrder?'+nowurl
-				console.log(data)
+				
 				Vue.http.options.emulateJSON = true;
 				Vue.http.post(SCORDERURL+'/makeOrder',data).then(function(response){
+					var now_price=response.body.data.price
+					if(window.sessionStorage){
+						sessionStorage.setItem("now_price1",now_price)
+					}
+					else{
+						Cookie.write("now_price1",now_price)
+					}
 					window.location.href="new_payment.html"
-                    
+                   	console.log(response.body.data.price) 
 				},function(err){
 					mui.toast('网络不可用，请检查网络');
 				})

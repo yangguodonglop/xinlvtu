@@ -39,7 +39,7 @@
 
 									<li v-for="item in list">
 										<p class="item_p1"><span class="item_span1">订单编号：{{item.order_id}}</span><span class="item_span2">待支付</span></p>
-										<p class="item_p2">
+										<p class="item_p2"  @click="go_url(item)">
 											<a href="#">
 												<span class="item_span1"><img :src="item.thumb"></span>
 												<span class="item_span2">
@@ -53,7 +53,7 @@
 											<a href="javascript:void(0)">
 												取消订单
 											</a>
-											<a href="javascript:void(0)" class="zf_bth" @click="go_url(item)">
+											<a href="javascript:void(0)" class="zf_bth" @click="go_pay(item)">
 												{{item.status}}
 											</a>
 										</p>
@@ -156,6 +156,17 @@
 					Cookie.write("order_xq_id", order_xq_id);
 				}
 				window.location.href = "pages/new_order_details.html";
+			},
+			go_pay:function(item){
+				var order_xq_id=item.id
+			
+
+				if(window.sessionStorage) {
+					sessionStorage.setItem("order_xq_id",order_xq_id);
+				} else {
+					Cookie.write("order_xq_id", order_xq_id);
+				}
+				window.location.href = "pages/new_payment.html";
 			}
 			
 		}

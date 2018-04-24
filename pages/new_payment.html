@@ -26,19 +26,19 @@
 		<div class="back_white margin_t_70">
 			<div class="row_2 padding_10 ali">
 				<div class="col_1">
-					<span class="margin_t_3 txt_16 c_txt1">在线支付:&nbsp;&nbsp;&nbsp;&nbsp;<span class="c_txt5 c_txt5_new">¥ {{price*count}}</span></span>
-					<span class="margin_t_3 txt_16 c_txt1">剩余支付时间:&nbsp;&nbsp;<span class="margin_t_3 txt_16 c_txt1"><img class="img_time" src="../imgs/new_img_027.png" /><span class="c_txt5 c_txt5_new"> {{times}}</span></span>
-					<!--<div class="margin_t_5 margin_b_5"><span class="txt_14 c_txt4">剩余支付时间</span><img class="order_details_iocn margin_l_10 margin_r_10" src="../images/img_49.png"/><span class="txt_12 c_txt3">23:48:53</span></div>-->
+					<span class="margin_t_3 txt_16 c_txt1">在线支付:&nbsp;&nbsp;&nbsp;&nbsp;<span class="c_txt5 c_txt5_new">¥ {{now_price}}</span></span>
+<!--					<span class="margin_t_3 txt_16 c_txt1">剩余支付时间:&nbsp;&nbsp;<span class="margin_t_3 txt_16 c_txt1"><img class="img_time" src="../imgs/new_img_027.png" /><span class="c_txt5 c_txt5_new"> {{times}}</span></span>
+-->					<!--<div class="margin_t_5 margin_b_5"><span class="txt_14 c_txt4">剩余支付时间</span><img class="order_details_iocn margin_l_10 margin_r_10" src="../images/img_49.png"/><span class="txt_12 c_txt3">23:48:53</span></div>-->
 				</div>
-				<img id="show_click" class="payment_up_down" style="" src="../imgs/img_51.png"/>
+				<!--<img id="show_click" class="payment_up_down" style="" src="../imgs/img_51.png"/>-->
 			</div>
-			<div class="col_1 payment_hei_120 txt_13 c_txt4 padding_b_7" style="display: none;">
+			<!--<div class="col_1 payment_hei_120 txt_13 c_txt4 padding_b_7" style="display: none;">
 				<div class="order_details_hr"></div>
 				<span class="margin_l_10">订单号:&nbsp;&nbsp;{{order_id}}</span>
 				<span class="margin_l_10">购买数量：&nbsp;成人 {{count}} </span>
 				<span class="margin_l_10">出行项目：&nbsp;{{title}}</span>
 				<span class="margin_l_10">订单金额： &nbsp;¥{{price*count}} (在线支付)</span>
-			</div>
+			</div>-->
 		</div>
 		
 		<!--选择支付方式-->  
@@ -57,7 +57,7 @@
 		
 		<!--确认支付-->
 		<div class="fix_but1 row">
-			<span class="ts_12 txt_c2 mar_l_20">应付：<span class="ts_20 txt_c1">¥2975</span></span>
+			<span class="ts_12 txt_c2 mar_l_20">应付：<span class="ts_20 txt_c1">{{now_price}}</span></span>
 			<span class="wid_42 but_bac1">确认支付</span>
 		</div>
 		</div>
@@ -79,6 +79,12 @@
 			count: '',
 			pay_type: 1,
 			times: '23:48:53',
+			now_price:''
+		},
+		mounted:function(){
+				var strStoreid_price = window.sessionStorage? sessionStorage.getItem("now_price1"): Cookie.read("now_price1");
+				console.log(strStoreid_price)
+				this.now_price=strStoreid_price
 		}
 	});
 
@@ -155,18 +161,18 @@
 <script type="text/javascript">
 	(function($, doc) {
 		mui.init();
-		var is_show = true;  //是否需要显示详情
-		$('#show_click')[0].addEventListener('tap', function(){
-			if (is_show) {
-				$('.payment_hei_120')[0].setAttribute('style', '');
-				this.setAttribute('src', '../imgs/img_50.png');
-				is_show = false;
-			}else{
-				$('.payment_hei_120')[0].setAttribute('style', 'display: none;');
-				this.setAttribute('src', '../imgs/img_51.png');
-				is_show = true;
-			}
-		});
+//		var is_show = true;  //是否需要显示详情
+//		$('#show_click')[0].addEventListener('tap', function(){
+//			if (is_show) {
+//				$('.payment_hei_120')[0].setAttribute('style', '');
+//				this.setAttribute('src', '../imgs/img_50.png');
+//				is_show = false;
+//			}else{
+//				$('.payment_hei_120')[0].setAttribute('style', 'display: none;');
+//				this.setAttribute('src', '../imgs/img_51.png');
+//				is_show = true;
+//			}
+//		});
 		//选择支付方法
 		$('.padding_r_10').on('tap', '.zxb_but', function(){
 			for (var i=1; i<3; i++) 
