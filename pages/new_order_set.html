@@ -95,7 +95,7 @@
 				</div>
 				<!--提交信息-->
 				<div class="fix_but1 row">
-					<span class="ts_12 txt_c2 mar_l_20">应付：<span class="ts_20 txt_c1">¥{{list1.suggest_price}}</span></span>
+					<span class="ts_12 txt_c2 mar_l_20">应付：<span class="ts_20 txt_c1">¥{{price_tatol}}</span></span>
 					<span class="wid_42 but_bac1" @click="goto_item()">提交订单</span>
 				</div>
 				<!--阅读并同意-->
@@ -126,6 +126,7 @@
 			num: 0,
 			isactive:true,
 			curr: '',
+			price_tatol:'',
 			curr1: '',
 			list1:[
 			],
@@ -150,6 +151,7 @@
 				Vue.http.get(order_fill+'?id='+strStoreid).then(function(respones){
 					console.log(respones.body.data)
 					vm.list1=respones.body.data
+					vm.price_tatol=vm.list1.suggest_price
 				
 				},function(err){
 					
@@ -175,13 +177,19 @@
 			//购买增减少数量
 			but_add: function() {
 				vm.num--
+				this.price_tatol=this.price_tatol=this.list1.suggest_price*vm.num
 					if(vm.num < 0) {
 						vm.num = 0
+						this.price_tatol=0
 					}
 			},
 			//购买增加数量
 			but_reduce: function() {
 				vm.num++
+				this.price_tatol=this.list1.suggest_price*vm.num
+//				if(vm.num=0){
+//					this.price__tatol=this.list1.suggest_price
+//				}
 			},
 			//提交订单验证
 			goto_item: function() {
@@ -212,21 +220,30 @@
 					num:vm.num
 					//sale:vm.curr.sale	
 				}
+				if(vm.num==0){
+					mui.alert('请填写正确数量');
+				}else{
+					Vue.http.options.emulateJSON = true;
 				
-				Vue.http.options.emulateJSON = true;
 				Vue.http.post(SCORDERURL+'/makeOrder',data).then(function(response){
-					var now_price=response.body.data.price
+					console.log(response)
+					var now_order_id=response.body.data.order_id
+					var now_price1=response.body.data.price
 					if(window.sessionStorage){
-						sessionStorage.setItem("now_price1",now_price)
+						sessionStorage.setItem("now_price1",now_price1)
+						sessionStorage.setItem("now_order_id",now_order_id)
 					}
 					else{
-						Cookie.write("now_price1",now_price)
+						Cookie.write("now_price1",now_price1)
+						Cookie.write("now_order_id",now_order_id)
 					}
 					window.location.href="new_payment.html"
                    	console.log(response.body.data.price) 
 				},function(err){
 					mui.toast('网络不可用，请检查网络');
 				})
+				}
+				
 
 			}
 		}

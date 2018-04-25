@@ -31,22 +31,23 @@
 			</div>
 			<!--导航模块-->
 			<div class="row pad_r_10 pad_t_5 b_w">
-				<template v-for="item in navs">
+				<!--<template v-for="item in navs">
 					<img class="wid_25 pad_l_10" :src="item.thumb" />
-				</template>
+				</template>-->
 
-				<!--<img class="wid_25 pad_l_10" src="imgs/img2.png"/>
-		<img class="wid_25 pad_l_10" src="imgs/img3.png"/>
-		<img class="wid_25 pad_l_10" src="imgs/img4.png"/>-->
+				<img class="wid_25 pad_l_10" src="imgs/img1.png" />
+				<img class="wid_25 pad_l_10" src="imgs/img2.png" />
+				<img class="wid_25 pad_l_10" src="imgs/img3.png" />
+				<img class="wid_25 pad_l_10" src="imgs/img4.png"  />
 			</div>
 			<div class="row pad_r_10 b_w pad_t_10 pad_b_10">
-				<template v-for="item in navs1">
+				<!--<template v-for="item in navs1">
 					<img class="wid_25 pad_l_10" :src="item.thumb" />
-				</template>
-				<!--<img class="wid_25 pad_l_10" src="imgs/img5.png"/>
-		<img class="wid_25 pad_l_10" src="imgs/img6.png"/>
-		<img class="wid_25 pad_l_10" src="imgs/img7.png"/>
-		<img class="wid_25 pad_l_10" src="imgs/img8.png"/>-->
+				</template>-->
+				<img class="wid_25 pad_l_10" src="imgs/img5.png" />
+				<img class="wid_25 pad_l_10" src="imgs/img6.png" />
+				<img class="wid_25 pad_l_10" src="imgs/img7.png" />
+				<img class="wid_25 pad_l_10" src="imgs/img8.png" />
 			</div>
 
 			<!--猜你想去-->
@@ -74,7 +75,7 @@
 							<div v-for="item in dt1" class="col wid_49 h_190 mar_b_10" @click="go_url(item)">
 								<div class="rel">
 									<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">武汉出发</span>
-									<img class="widths zxb_img" :src="item.thumb" />
+									<i><img class="widths zxb_img" :src="item.thumb" /></i>
 								</div>
 								<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title}}</span>
 								<div class="row widths mar_t_5">
@@ -92,7 +93,7 @@
 							<div v-for="item in dt2" class="col wid_49 h_190 mar_b_10" @click="go_url(item)">
 								<div class="rel">
 									<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">武汉出发</span>
-									<img class="widths zxb_img" :src="item.thumb" />
+									<i><img class="widths zxb_img" :src="item.thumb" /></i>
 								</div>
 								<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title}}</span>
 								<div class="row widths mar_t_5">
@@ -110,7 +111,7 @@
 							<div v-for="item in dt3" class="col wid_49 h_190 mar_b_10" @click="go_url(item)">
 								<div class="rel">
 									<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">武汉出发</span>
-									<img class="widths zxb_img" :src="item.thumb" />
+									<i><img class="widths zxb_img" :src="item.thumb" /></i>
 								</div>
 								<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title}}</span>
 								<div class="row widths mar_t_5">
@@ -128,7 +129,7 @@
 							<div v-for="item in dt4" class="col wid_49 h_190 mar_b_10" @click="go_url(item)">
 								<div class="rel">
 									<span class="abs iocn2 pad_l_10 pad_r_15 txt_cw ts_12">武汉出发</span>
-									<img class="widths zxb_img" :src="item.thumb" />
+									<i><img class="widths zxb_img" :src="item.thumb" /></i>
 								</div>
 								<span class="mar_t_5 txt_c2 as_fs pad_l_5 pad_r_5 h_115">{{item.title}}</span>
 								<div class="row widths mar_t_5">
@@ -181,12 +182,12 @@
 
 				this.places = js_citys_id
 			}
-			let data={
-				city:js_citys_id
+			let data = {
+				city: js_citys_id
 			}
 			//首页位置切换
 			Vue.http.options.emulateJSON = true;
-			Vue.http.post(URLS+'/city',data).then(function(respones) {
+			Vue.http.post(URLS + '/city', data).then(function(respones) {
 
 			}, function(err) {
 				mui.toast('网络不可用，请检查网络');
@@ -208,7 +209,7 @@
 				app.navs = new_nav;
 				app.navs1 = new_nav1;
 			}, function(err) {
-					mui.toast('网络不可用，请检查网络');
+				mui.toast('网络不可用，请检查网络');
 			});
 
 			//获取轮播图
@@ -276,6 +277,8 @@
 				var n2 = img2 - sTop;
 				var n3 = img3 - sTop;
 				var n4 = img4 - sTop;
+			
+			
 
 				if(n1 < 48 && n2 > 48)
 					app.cur_page = 0;
@@ -287,9 +290,9 @@
 					app.cur_page = 3;
 			}
 
-			function goto_item(n) {
-
-			}
+//			function goto_item(n) {
+//
+//			}
 			//			mui.showLoading('正在加载数据...');
 			//			this.getdata();
 		},

@@ -184,11 +184,30 @@ to {height:381px;}
 	float: left;
 	
 }
-/*.mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
-	color: #474747;
-	border-bottom: 1px solid #FFFFFF;
+.payment_txt {
+    background-color: #f84862;
+    padding: 2px 5px;
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 5px;
+    border-radius: 3px;
 }
-.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.bottom_bor5 {
-    color: #ff7403;
-    border-bottom: 1px solid #ff7403;
-}*/
+.rel i{
+	width: 190px;
+	height: 130px;
+	overflow: hidden;
+	display: block;
+}
+.row_wrap .col .mar_t_5{
+	/*width: 190px;
+	height: 45px;
+	overflow: hidden;
+	display: block;
+	background: red;*/
+}
+.index_tit_fix{
+	line-height: 37px;
+}
+.index_tit_fix1{
+	line-height: 37px;
+}

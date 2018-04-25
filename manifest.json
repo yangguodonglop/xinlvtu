@@ -37,7 +37,7 @@
         },
         "Speech": {
             "description": "管理语音识别插件"
-        }
+        },"NativeUI":{},"Invocation":{},"Webview":{},"Storage":{},"Runtime":{},"NativeObj":{},"Navigator":{},"Geolocation":{},"XMLHttpRequest":{}
 	},
 	"plus": {
 		"launchwebview": {
@@ -109,7 +109,7 @@
 					"iphone": {
 						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
 						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": ""
+						"retina40": "","retina55":"C:/Users/admin/Desktop/new_img_023.png"
 					},
 					"ipad": {
 						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
@@ -231,7 +231,12 @@
 					"css/index.css",
 					"css/base.css",
 					"css/mui.min.css",
-					"pages/new_payment.html"
+					"pages/new_payment.html",
+					"js/vue_resource.js",
+					"js/mui.min.js",
+					"js/vue.min.js",
+					"js/showLoding.js",
+					"js/base_data.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -245,7 +250,12 @@
 					"css/mui.min.css",
 					"imgs/img_44.png",
 					"imgs/img_38.png",
-					"pages/new_order_set.html"
+					"pages/new_order_set.html",
+					"js/vue_resource.js",
+					"js/mui.min.js",
+					"js/vue.min.js",
+					"js/showLoding.js",
+					"js/base_data.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -261,7 +271,12 @@
 					"css/mui.min.css",
 					"imgs/img_50.png",
 					"css/personal_set.css",
-					"imgs/new_img_027.png"
+					"imgs/new_img_027.png",
+					"js/vue_resource.js",
+					"js/mui.min.js",
+					"js/vue.min.js",
+					"js/showLoding.js",
+					"js/base_data.js"
 				],
 				"refer": [],
 				"priority": 0

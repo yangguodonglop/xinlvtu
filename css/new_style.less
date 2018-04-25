@@ -788,7 +788,7 @@ body {
     .tr_palce_item {
         width: 100%;
       margin-top: 10px;
-      display: none;
+      display: block;
         .place_item_banner {
             width: 100%;
             height: auto;
@@ -820,6 +820,12 @@ body {
                         overflow: hidden;
                         position: relative;
                         margin-bottom: 0px;
+                        i{
+                            width: 170px;
+                            height: 95px;
+                            float: left;
+                            overflow: hidden;
+                        }
                         img {
                             width: 100%;
                             height: auto;
@@ -844,7 +850,7 @@ body {
                             color: @text_color5;
                             float: left;
                             width: 100%;
-                            height: auto;
+                            height: 42px;
                             overflow: hidden;
                         }
                     }
@@ -915,6 +921,7 @@ body {
     
 }
 .my_order_new{
+  
     ul li{
         width: 100%;
         height: auto;
@@ -1048,7 +1055,20 @@ body {
     color: #ff7403;
     border-bottom: 2px solid #ff7403;
 }
-.my_order .my_order_item{
+.my_order
+  .row{
+        .action_tit{
+          color: #474747;
+          font-size: 14px;
+              border-bottom: 2px solid white;
+          
+        }
+        .action_tit1{
+              font-size: 14px;
+              border-bottom:2px solid #ff7403;
+          }
+    } 
+ .my_order_item{
     padding: 0 10px;
     line-height: 42px;
 }
